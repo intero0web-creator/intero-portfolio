@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Студия PULSE — абонементы и цены</title>
+<meta name="description" content="Цены на персональные тренировки и абонементы: пробное занятие, разовое, пакеты на 8 и 12 занятий. Прозрачно, без скрытых доплат." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Абонементы и цены — Студия PULSE" />
+<meta property="og:description" content="Пробное бесплатно, разовое и пакеты на 8–12 занятий. Без скрытых доплат." />
+<meta property="og:image" content="og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Персональные тренировки — Студия PULSE","description":"Персональные фитнес-тренировки, йога, HIIT.","brand":{"@type":"Brand","name":"Студия PULSE"},"offers":[
+{"@type":"Offer","name":"Разовое занятие","price":"2000","priceCurrency":"RUB","availability":"https://schema.org/InStock"},
+{"@type":"Offer","name":"Пакет 8 занятий","price":"14000","priceCurrency":"RUB","availability":"https://schema.org/InStock"},
+{"@type":"Offer","name":"Пакет 12 занятий","price":"19200","priceCurrency":"RUB","availability":"https://schema.org/InStock"}]}
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-mark" data-bind="logoInitial">P</span><span class="nav__logo-text"><b data-bind="studio">Студия PULSE</b><em data-bind="tagline">персональный тренинг</em></span></a>
+    <nav class="nav__menu"><a href="index.html">Главная</a><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="o-trenere.html">Тренер</a><a href="abonementy.html" class="is-active">Абонементы</a><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a></nav>
+    <div class="nav__right"><a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a><div class="nav__social"><a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a><a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg></a></div><a href="#" data-book class="btn btn--accent nav__cta">Записаться</a><button class="nav__burger" id="burger" aria-label="Меню"><span></span></button></div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html">Главная</a><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="o-trenere.html">Тренер</a><a href="abonementy.html">Абонементы</a><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a></div>
+
+<div class="container"><div class="crumbs"><a href="index.html">Главная</a> / Абонементы</div></div>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">Цены</div>
+    <h1>Абонементы <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">и цены</span></h1>
+    <p>Прозрачно и без скрытых доплат. Первое занятие — бесплатно, чтобы вы спокойно приняли решение.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="pricing">
+      <div class="plan reveal">
+        <div class="plan__name">Разовое</div>
+        <div class="plan__price">2 000&nbsp;<small>₽ / занятие</small></div>
+        <ul><li>60 минут персонально</li><li>Любое направление</li><li>Разбор техники</li><li>Без обязательств</li></ul>
+        <a href="#" data-book class="btn btn--outline">Записаться онлайн</a>
+      </div>
+      <div class="plan plan--hot reveal">
+        <span class="badge-hot">Выгодно · −13%</span>
+        <div class="plan__name">Пакет 8 занятий</div>
+        <div class="plan__price">14 000&nbsp;<small>₽ · 1 750 ₽/зан.</small></div>
+        <ul><li>8 персональных тренировок</li><li>План питания-рекомендации</li><li>Замеры и контроль прогресса</li><li>Поддержка в мессенджере</li><li>Заморозка до 14 дней</li></ul>
+        <a href="#" data-book class="btn btn--accent">Выбрать пакет</a>
+      </div>
+      <div class="plan reveal">
+        <div class="plan__name">Пакет 12 занятий</div>
+        <div class="plan__price">19 200&nbsp;<small>₽ · 1 600 ₽/зан.</small></div>
+        <ul><li>12 персональных тренировок</li><li>Индивидуальная программа</li><li>Питание и восстановление</li><li>Приоритетная запись</li><li>Заморозка до 21 дня</li></ul>
+        <a href="#" data-book class="btn btn--outline">Выбрать пакет</a>
+      </div>
+    </div>
+
+    <div class="card reveal mt-40" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+      <div>
+        <h3 style="margin-bottom:6px">Первое занятие — 0 ₽</h3>
+        <p>Диагностика, знакомство и пробная тренировка. Никаких обязательств покупать абонемент.</p>
+      </div>
+      <a href="#" data-book class="btn btn--accent btn--lg">Записаться бесплатно</a>
+    </div>
+
+    <p style="color:var(--ink-soft);font-size:13.5px;margin-top:18px">Групповые занятия и мини-группы — дешевле персональных, уточняйте на диагностике. Оплата картой или переводом.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col"><div style="font-family:var(--font-disp);font-weight:800" data-bind="studio">Студия PULSE</div><span style="color:var(--ink-soft);font-size:14px" data-bind="footerCopy">© 2026</span></div>
+    <div class="footer__col"><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="abonementy.html">Абонементы</a></div>
+    <div class="footer__col"><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a><a href="politika.html">Политика конфиденциальности</a></div>
+    <div class="footer__col"><div class="footer__soc">
+      <a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+      <a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+    </div></div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#" data-book class="mc-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Запись</a>
+  <a href="#" data-social="whatsapp" class="mc-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+  <a href="#" data-social="telegram" class="mc-tg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+  <a href="tel:+70000000000" data-tel class="mc-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>Звонок</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

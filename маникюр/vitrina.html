@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Витрина дизайнов — примерьте маникюр онлайн</title>
+<meta name="description" content="Интерактивная витрина: выберите цвет, готовое сочетание и стиль покрытия." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Витрина дизайнов — примерьте маникюр онлайн" />
+<meta property="og:description" content="Выберите цвет, готовое сочетание и стиль покрытия — увидите результат сразу." />
+<meta property="og:image" content="og.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" data-bind="logoInitial">М</span>
+      <span class="nav__logo-text"><b data-bind="studio">Студия ногтевого сервиса</b><em data-bind="tagline">мастер маникюра</em></span>
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html">Главная</a>
+      <a href="uslugi.html">Услуги</a>
+      <a href="vitrina.html" class="is-active">Витрина</a>
+      <a href="portfolio.html">Портфолио</a>
+      <a href="faq.html">Вопросы</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a>
+      <div class="nav__social">
+        <a href="#" data-social="telegram" class="soc-ic soc-ic--tg" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+        <a href="#" data-social="whatsapp" class="soc-ic soc-ic--wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+      </div>
+      <a href="kontakty.html" class="btn btn--primary nav__cta">Записаться</a>
+      <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="vitrina.html">Витрина</a><a href="portfolio.html">Портфолио</a><a href="o-mastere.html">О мастере</a><a href="faq.html">Вопросы</a><a href="kontakty.html">Контакты</a>
+</div>
+
+<section class="section page-hero">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <div class="eyebrow">Витрина дизайнов</div>
+      <h2 class="section__title">Примерьте маникюр прямо сейчас</h2>
+      <p class="section__sub">Выберите оттенок, готовое сочетание или стиль — рука и флакон меняются в реальном времени.</p>
+    </div>
+
+    <div class="showcase__stage" id="stage">
+      <div class="preview">
+        <svg class="flacon-svg" viewBox="0 0 200 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2ddd2"/><stop offset="0.5" stop-color="#d8b3c1"/><stop offset="1" stop-color="#c093a6"/></linearGradient>
+            <linearGradient id="liqSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="0.4" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <ellipse cx="100" cy="250" rx="54" ry="10" fill="#c98fa0" opacity="0.22"/>
+          <rect x="72" y="8" width="56" height="60" rx="18" fill="url(#capGrad)"/>
+          <rect x="86" y="64" width="28" height="16" fill="#e9d2c6"/>
+          <rect class="flacon-glass" x="46" y="80" width="108" height="156" rx="30" stroke="#eccfd6" stroke-width="2"/>
+          <rect class="flacon-liquid" x="56" y="98" width="88" height="130" rx="24"/>
+          <rect class="flacon-liquid" x="56" y="98" width="88" height="130" rx="24" fill="url(#liqSheen)"/>
+          <rect class="flacon-hl" x="64" y="106" width="13" height="96" rx="6.5" opacity="0.4"/>
+          <ellipse class="flacon-hl" cx="118" cy="120" rx="6" ry="14" opacity="0.22"/>
+        </svg>
+        <svg class="nail-tips" viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="ombreGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf5f0" class="ombre-top"/><stop offset="1" stop-color="#e7b7ad" class="ombre-bottom"/></linearGradient>
+            <linearGradient id="nailShine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="0.45" stop-color="#ffffff" stop-opacity="0.05"/><stop offset="1" stop-color="#000000" stop-opacity="0.06"/></linearGradient>
+          </defs>
+          <g class="nails" transform="translate(0 6)">
+            <g class="nail" transform="translate(40 20)"><ellipse class="nail-base" cx="0" cy="46" rx="17" ry="40"/><ellipse class="nail-moon" cx="0" cy="80" rx="12" ry="6"/><path class="nail-tip" d="M-17 30 a17 40 0 0 1 34 0 Z"/><ellipse cx="0" cy="46" rx="17" ry="40" fill="url(#nailShine)"/><g class="nail-glit"><circle cx="-4" cy="40" r="1.6"/><circle cx="5" cy="52" r="1.4"/><circle cx="-2" cy="62" r="1.2"/></g></g>
+            <g class="nail" transform="translate(100 8)"><ellipse class="nail-base" cx="0" cy="50" rx="18" ry="44"/><ellipse class="nail-moon" cx="0" cy="86" rx="13" ry="6"/><path class="nail-tip" d="M-18 32 a18 44 0 0 1 36 0 Z"/><ellipse cx="0" cy="50" rx="18" ry="44" fill="url(#nailShine)"/><g class="nail-glit"><circle cx="-4" cy="44" r="1.6"/><circle cx="5" cy="56" r="1.4"/><circle cx="-2" cy="66" r="1.2"/></g></g>
+            <g class="nail" transform="translate(160 4)"><ellipse class="nail-base" cx="0" cy="52" rx="18" ry="46"/><ellipse class="nail-moon" cx="0" cy="90" rx="13" ry="6"/><path class="nail-tip" d="M-18 33 a18 46 0 0 1 36 0 Z"/><ellipse cx="0" cy="52" rx="18" ry="46" fill="url(#nailShine)"/><g class="nail-glit"><circle cx="-4" cy="46" r="1.6"/><circle cx="5" cy="58" r="1.4"/><circle cx="-2" cy="68" r="1.2"/></g></g>
+            <g class="nail nail--accent" transform="translate(220 8)"><ellipse class="nail-base" cx="0" cy="50" rx="18" ry="44"/><ellipse class="nail-moon" cx="0" cy="86" rx="13" ry="6"/><path class="nail-tip" d="M-18 32 a18 44 0 0 1 36 0 Z"/><ellipse cx="0" cy="50" rx="18" ry="44" fill="url(#nailShine)"/><g class="nail-glit"><circle cx="-4" cy="44" r="1.6"/><circle cx="5" cy="56" r="1.4"/><circle cx="-2" cy="66" r="1.2"/></g></g>
+            <g class="nail" transform="translate(280 22)"><ellipse class="nail-base" cx="0" cy="44" rx="16" ry="38"/><ellipse class="nail-moon" cx="0" cy="76" rx="11" ry="5"/><path class="nail-tip" d="M-16 28 a16 38 0 0 1 32 0 Z"/><ellipse cx="0" cy="44" rx="16" ry="38" fill="url(#nailShine)"/><g class="nail-glit"><circle cx="-4" cy="38" r="1.5"/><circle cx="4" cy="50" r="1.3"/><circle cx="-2" cy="58" r="1.1"/></g></g>
+          </g>
+        </svg>
+      </div>
+
+
+      <div class="showcase__panel">
+        <div class="shade-name" id="shade-name">Нюд-роза</div>
+
+        <div class="ctrl">
+          <div class="ctrl__label">Оттенок</div>
+          <div class="swatches" id="swatches">
+            <button class="swatch is-active" style="--c:#e7b7ad" data-color="#e7b7ad" aria-label="Нюд-роза"></button>
+            <button class="swatch" style="--c:#f3e6de" data-color="#f3e6de" aria-label="Молочный"></button>
+            <button class="swatch" style="--c:#dcb4b4" data-color="#dcb4b4" aria-label="Пудра"></button>
+            <button class="swatch" style="--c:#e6a98c" data-color="#e6a98c" aria-label="Персик"></button>
+            <button class="swatch" style="--c:#d9705f" data-color="#d9705f" aria-label="Коралл"></button>
+            <button class="swatch" style="--c:#9e2740" data-color="#9e2740" aria-label="Вишня"></button>
+            <button class="swatch" style="--c:#5f2333" data-color="#5f2333" aria-label="Бордо"></button>
+            <button class="swatch" style="--c:#8a5a44" data-color="#8a5a44" aria-label="Мокко"></button>
+            <button class="swatch" style="--c:#b7a7c4" data-color="#b7a7c4" aria-label="Лавандовый"></button>
+            <button class="swatch" style="--c:#1f5f4f" data-color="#1f5f4f" aria-label="Изумруд"></button>
+            <button class="swatch" style="--c:#3a3540" data-color="#3a3540" aria-label="Графит"></button>
+          </div>
+        </div>
+
+        <div class="ctrl">
+          <div class="ctrl__label">Готовые сочетания</div>
+          <div class="palettes" id="palettes">
+            <button class="palette" data-main="#e7b7ad" data-accent="#6e4a3a" data-name="Нюд + шоколад"><span class="palette__dots"><i style="background:#e7b7ad"></i><i style="background:#6e4a3a"></i></span><span class="palette__name">Нюд + шоколад</span></button>
+            <button class="palette" data-main="#f3e6de" data-accent="#9e2740" data-name="Молочный + вишня"><span class="palette__dots"><i style="background:#f3e6de"></i><i style="background:#9e2740"></i></span><span class="palette__name">Молочный + вишня</span></button>
+            <button class="palette" data-main="#dcb4b4" data-accent="#5f2333" data-name="Пудра + бордо"><span class="palette__dots"><i style="background:#dcb4b4"></i><i style="background:#5f2333"></i></span><span class="palette__name">Пудра + бордо</span></button>
+            <button class="palette" data-main="#c3aede" data-accent="#6a6a86" data-name="Лаванда + сталь"><span class="palette__dots"><i style="background:#c3aede"></i><i style="background:#6a6a86"></i></span><span class="palette__name">Лаванда + сталь</span></button>
+            <button class="palette" data-main="#cdaf9c" data-accent="#8a5a44" data-name="Кофе с молоком"><span class="palette__dots"><i style="background:#cdaf9c"></i><i style="background:#8a5a44"></i></span><span class="palette__name">Кофе с молоком</span></button>
+            <button class="palette" data-main="#f0cdd6" data-accent="#b9c0c9" data-name="Жемчуг + серебро"><span class="palette__dots"><i style="background:#f0cdd6"></i><i style="background:#b9c0c9"></i></span><span class="palette__name">Жемчуг + серебро</span></button>
+          </div>
+        </div>
+
+        <div class="ctrl">
+          <div class="ctrl__label">Стиль покрытия</div>
+          <div class="styles" id="styles">
+            <button class="style is-active" data-style="solid">Глянец</button>
+            <button class="style" data-style="matte">Матовый</button>
+            <button class="style" data-style="french">Френч</button>
+            <button class="style" data-style="ombre">Омбре</button>
+            <button class="style" data-style="glitter">Шиммер</button>
+          </div>
+        </div>
+
+        <a href="kontakty.html" class="btn btn--primary btn--wide">Записаться на этот дизайн</a>
+        <p class="ctrl__hint">Понравился вариант? Запишитесь — подберём точный оттенок вживую.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Наша продукция</div>
+      <h2 class="section__title">Что мы используем в работе</h2>
+      <p class="section__sub">Профессиональные материалы и уходовая косметика. Цены и названия — шаблонные, впишите свои.</p>
+    </div>
+    <div class="products">
+      <div class="product"><div class="product__img">💅</div><h4>Гель-лак</h4><p class="product__brand">Профессиональная линейка</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">🧴</div><h4>Топ-покрытие</h4><p class="product__brand">Глянец / матовый финиш</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">💧</div><h4>Масло для кутикулы</h4><p class="product__brand">С витаминами E и A</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">🌸</div><h4>Крем для рук</h4><p class="product__brand">Питание и восстановление</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">✨</div><h4>База под покрытие</h4><p class="product__brand">Укрепляющая, каучуковая</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">🎨</div><h4>Дизайн-декор</h4><p class="product__brand">Стразы, слюда, фольга</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">🧽</div><h4>Скраб для рук</h4><p class="product__brand">Мягкое отшелушивание</p><div class="product__price">от 0 000 ₽</div></div>
+      <div class="product"><div class="product__img">🛁</div><h4>Ванночка для ног</h4><p class="product__brand">Расслабление и уход</p><div class="product__price">от 0 000 ₽</div></div>
+    </div>
+    <p style="text-align:center;color:var(--ink-mute);font-size:14px;margin-top:22px">Продукция доступна для покупки в кабинете. О наличии узнавайте при записи.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div data-bind="footerCopy">© 2026</div>
+    <div><a href="politika.html">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+70000000000" class="mc-call" data-tel><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>Позвонить</a>
+  <a href="#" class="mc-wa" data-social="whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>WhatsApp</a>
+</div>
+
+<a href="tel:+70000000000" class="call-fab" data-tel aria-label="Позвонить">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+</a>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

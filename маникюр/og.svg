@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fdf6f4"/><stop offset="0.5" stop-color="#fbe4ec"/><stop offset="1" stop-color="#ece0fa"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e79bb0"/><stop offset="0.6" stop-color="#c3a7e0"/><stop offset="1" stop-color="#cf6f8e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="200" fill="#f6d0da" opacity="0.4"/>
+  <circle cx="120" cy="520" r="180" fill="#e7d9f5" opacity="0.5"/>
+  <text x="90" y="290" font-family="Georgia, serif" font-size="96" font-style="italic" font-weight="700" fill="url(#ac)">Ухоженные</text>
+  <text x="90" y="380" font-family="Georgia, serif" font-size="96" font-style="italic" font-weight="700" fill="#4a3a42">ноготки</text>
+  <text x="92" y="450" font-family="Arial, sans-serif" font-size="32" fill="#8a7680">Маникюр · Педикюр · Покрытие до 4 недель</text>
+  <text x="92" y="510" font-family="Arial, sans-serif" font-size="26" fill="#cf6f8e" font-weight="700">Запись онлайн · стерильные инструменты</text>
+</svg>

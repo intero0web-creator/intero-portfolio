@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Фотограф</title>
+<meta name="description" content="Частная практика фотографа: свадьбы, портреты, предметка. Прайс и локации." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Фотограф — частная практика" />
+<meta property="og:description" content="Свадьбы, портреты, предметка. Прайс, локации, отзывы." />
+<meta property="og:image" content="og.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="progress"><i></i></div>
+
+<div class="film film--left" aria-hidden="true"><div class="film-strip">
+  <div class="film-frame"><div class="film-photo ff-1" data-n="1"></div></div>
+  <div class="film-frame"><div class="film-photo ff-2" data-n="2"></div></div>
+  <div class="film-frame"><div class="film-photo ff-3" data-n="3"></div></div>
+  <div class="film-frame"><div class="film-photo ff-4" data-n="4"></div></div>
+  <div class="film-frame"><div class="film-photo ff-5" data-n="5"></div></div>
+  <div class="film-frame"><div class="film-photo ff-6" data-n="6"></div></div>
+  <div class="film-frame"><div class="film-photo ff-7" data-n="7"></div></div>
+  <div class="film-frame"><div class="film-photo ff-8" data-n="8"></div></div>
+  <div class="film-frame"><div class="film-photo ff-9" data-n="9"></div></div>
+  <div class="film-frame"><div class="film-photo ff-10" data-n="10"></div></div>
+  <div class="film-frame"><div class="film-photo ff-11" data-n="11"></div></div>
+  <div class="film-frame"><div class="film-photo ff-12" data-n="12"></div></div>
+  <div class="film-frame"><div class="film-photo ff-13" data-n="13"></div></div>
+  <div class="film-frame"><div class="film-photo ff-14" data-n="14"></div></div>
+  <div class="film-frame"><div class="film-photo ff-15" data-n="15"></div></div>
+  <div class="film-frame"><div class="film-photo ff-16" data-n="16"></div></div>
+  <div class="film-frame"><div class="film-photo ff-17" data-n="17"></div></div>
+  <div class="film-frame"><div class="film-photo ff-18" data-n="18"></div></div>
+  <div class="film-frame"><div class="film-photo ff-19" data-n="19"></div></div>
+  <div class="film-frame"><div class="film-photo ff-20" data-n="20"></div></div>
+</div></div>
+<div class="film film--right" aria-hidden="true"><div class="film-strip">
+  <div class="film-frame"><div class="film-photo ff-20" data-n="1A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-11" data-n="2A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-3" data-n="3A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-18" data-n="4A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-6" data-n="5A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-14" data-n="6A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-2" data-n="7A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-9" data-n="8A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-16" data-n="9A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-5" data-n="10A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-13" data-n="11A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-7" data-n="12A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-19" data-n="13A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-4" data-n="14A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-12" data-n="15A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-1" data-n="16A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-17" data-n="17A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-8" data-n="18A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-15" data-n="19A"></div></div>
+  <div class="film-frame"><div class="film-photo ff-10" data-n="20A"></div></div>
+</div></div>
+
+<nav class="dot-nav" aria-label="Разделы">
+  <a href="#prolog" data-label="Пролог"></a>
+  <a href="#directions" data-label="Направления"></a>
+  <a href="#prices" data-label="Прайс"></a>
+  <a href="#locations" data-label="Локации"></a>
+  <a href="#reviews" data-label="Отзывы"></a>
+  <a href="#epilog" data-label="Связаться"></a>
+</nav>
+
+<div class="wrap">
+
+<!-- ПРОЛОГ -->
+<section id="prolog" class="chapter prologue">
+  <div>
+    <div class="meta">
+      <span data-bind="role">фотограф</span>
+      <span data-bind="city">Город</span>
+      <span>с 2016</span>
+    </div>
+    <h1>
+      <span class="line">Свет,</span>
+      <span class="line">и в свете —</span>
+      <span class="line"><em>человек.</em></span>
+    </h1>
+    <div class="meta" style="margin-top:30px;color:var(--dim);font-size:13px;">
+      <span><b style="color:var(--acc);font-family:var(--serif);font-size:20px;">500+</b> съёмок</span>
+      <span><b style="color:var(--acc);font-family:var(--serif);font-size:20px;">8 лет</b> практики</span>
+      <span><b style="color:var(--acc);font-family:var(--serif);font-size:20px;">4.9</b> рейтинг</span>
+    </div>
+  </div>
+</section>
+
+<!-- НАПРАВЛЕНИЯ (с ценой в строке) -->
+<section id="directions" class="chapter reveal">
+  <span class="chapter-n">I · Направления</span>
+  <h2>Что <em>снимаю</em></h2>
+  <ul class="directions">
+    <li>
+      <span class="d-n">01</span>
+      <div>
+        <div class="d-name">Свадьбы</div>
+        <p style="margin:4px 0 0;color:var(--dim);font-size:15px;">Полный день без постановки. 300+ обработанных кадров.</p>
+      </div>
+      <span class="d-price">25 000 – 60 000 ₽</span>
+    </li>
+    <li>
+      <span class="d-n">02</span>
+      <div>
+        <div class="d-name">Портреты</div>
+        <p style="margin:4px 0 0;color:var(--dim);font-size:15px;">Индивидуальные и семейные. 1–2 часа, 30 кадров.</p>
+      </div>
+      <span class="d-price">25 000 – 60 000 ₽</span>
+    </li>
+    <li>
+      <span class="d-n">03</span>
+      <div>
+        <div class="d-name">Предметная съёмка</div>
+        <p style="margin:4px 0 0;color:var(--dim);font-size:15px;">Товары для маркетплейсов и каталогов.</p>
+      </div>
+      <span class="d-price">25 000 – 60 000 ₽ / шт.</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ПРАЙС -->
+<section id="prices" class="chapter reveal">
+  <span class="chapter-n">II · Прайс</span>
+  <h2>Пакеты <em>съёмок</em></h2>
+  <p class="lead">Цены — шаблонные. Точная стоимость зависит от локации и объёма ретуши.</p>
+  <ul class="prices">
+    <li><span class="p-name">Мини-съёмка (30 минут)</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+    <li><span class="p-name">Полная фотосессия (1–2 часа)</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+    <li><span class="p-name">LovE-story (свадебная предсъёмка)</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+    <li><span class="p-name">Свадебный день</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+    <li><span class="p-name">Студийная съёмка (час)</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+    <li><span class="p-name">Ретушь портрета (за кадр)</span><span class="p-val">25 000 – 60 000 ₽</span></li>
+  </ul>
+  <p class="prices-note">В стоимость входит цветокоррекция и отбор кадров. Глубокая ретушь — отдельно.</p>
+</section>
+
+<!-- ЛОКАЦИИ -->
+<section id="locations" class="chapter reveal">
+  <span class="chapter-n">III · География</span>
+  <h2>Где <em>снимал</em></h2>
+  <p class="lead">Города и локации из практики. Готов к выезду за пределы города — обсуждается отдельно.</p>
+  <ul class="locations">
+    <li>Москва и область</li>
+    <li>Санкт-Петербург</li>
+    <li>Калининград</li>
+    <li>Казань</li>
+    <li>Сочи и побережье</li>
+    <li>Алтай</li>
+    <li>Крым</li>
+    <li>Карелия</li>
+    <li>Стамбул</li>
+    <li>Батуми</li>
+    <li>Ереван</li>
+    <li>Тбилиси</li>
+  </ul>
+  <p class="prices-note" style="margin-top:18px">Плейсхолдер — впишите свои реальные локации.</p>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section id="reviews" class="chapter reveal">
+  <span class="chapter-n">IV · Отзывы</span>
+  <h2>Что <em>говорят</em></h2>
+  <div class="review-full">
+    <blockquote>
+      <p>Кадры получились такие, будто никого рядом не было. Смотрю через год — и слёзы.</p>
+      <footer>Анна и Кирилл · свадьба, июнь 2024</footer>
+    </blockquote>
+    <blockquote>
+      <p>Товар начал продаваться в три раза лучше. Не понимаю, как это работает — но работает.</p>
+      <footer>Марина · предметная съёмка, февраль 2024</footer>
+    </blockquote>
+    <blockquote>
+      <p>Дети даже не заметили, что их снимают. Это дороже любого объектива.</p>
+      <footer>Ольга · семейная съёмка, ноябрь 2023</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ЭПИЛОГ -->
+<section id="epilog" class="chapter reveal epilogue">
+  <span class="chapter-n">V · Эпилог</span>
+  <h2>Если <em>решились</em></h2>
+  <p class="lead">Напишите пару строк: какая съёмка, когда, где. Отвечу в течение дня.</p>
+  <ul class="contacts-list">
+    <li><span>Телефон</span><a href="tel:+70000000000" data-tel data-bind="phoneDisplay">+7 (000) 000-00-00</a></li>
+    <li><span>Почта</span><a href="mailto:info@example.com" data-mail data-bind="email">info@example.com</a></li>
+    <li><span>Telegram</span><a href="#" data-social="telegram" target="_blank" rel="noopener" class="soc-link"><svg viewBox="0 0 24 24" fill="#37aee2" width="20" height="20"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>@username</a></li>
+    <li><span>WhatsApp</span><a href="#" data-social="whatsapp" target="_blank" rel="noopener" class="soc-link"><svg viewBox="0 0 24 24" fill="#25d366" width="20" height="20"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>+7 (000) 000</a></li>
+    <li><span>Instagram</span><a href="#" data-social="instagram" target="_blank" rel="noopener" class="soc-link"><svg viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="1.8" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#e1306c" stroke="none"/></svg>@username</a></li>
+  </ul>
+  <a href="mailto:info@example.com" data-mail class="cta-write">напишите мне →</a>
+</section>
+
+<footer class="foot">
+  <div>© 2026 · <span data-bind="name">Имя Фамилия</span> · <a href="politika.html">Политика конфиденциальности</a></div>
+</footer>
+
+</div><!-- /.wrap -->
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

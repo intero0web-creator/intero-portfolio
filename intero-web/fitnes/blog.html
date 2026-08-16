@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Студия PULSE — блог о тренировках и здоровье</title>
+<meta name="description" content="Статьи тренера: с чего начать новичку, сколько раз в неделю тренироваться, как питаться при похудении и не бросить занятия." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Блог — Студия PULSE" />
+<meta property="og:description" content="Практичные статьи тренера о тренировках, питании и мотивации." />
+<meta property="og:image" content="og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Блог Студии PULSE","blogPost":[
+{"@type":"BlogPosting","headline":"С чего начать новичку в зале","datePublished":"2026-06-02","author":{"@type":"Person","name":"Имя Фамилия"},"url":"blog.html#start"},
+{"@type":"BlogPosting","headline":"Сколько раз в неделю тренироваться","datePublished":"2026-06-20","author":{"@type":"Person","name":"Имя Фамилия"},"url":"blog.html#frequency"},
+{"@type":"BlogPosting","headline":"Питание при похудении: без диет и срывов","datePublished":"2026-07-08","author":{"@type":"Person","name":"Имя Фамилия"},"url":"blog.html#nutrition"}]}
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-mark" data-bind="logoInitial">P</span><span class="nav__logo-text"><b data-bind="studio">Студия PULSE</b><em data-bind="tagline">персональный тренинг</em></span></a>
+    <nav class="nav__menu"><a href="index.html">Главная</a><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="o-trenere.html">Тренер</a><a href="abonementy.html">Абонементы</a><a href="blog.html" class="is-active">Блог</a><a href="kontakty.html">Контакты</a></nav>
+    <div class="nav__right"><a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a><div class="nav__social"><a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a><a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg></a></div><a href="#" data-book class="btn btn--accent nav__cta">Записаться</a><button class="nav__burger" id="burger" aria-label="Меню"><span></span></button></div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html">Главная</a><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="o-trenere.html">Тренер</a><a href="abonementy.html">Абонементы</a><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a></div>
+
+<div class="container"><div class="crumbs"><a href="index.html">Главная</a> / Блог</div></div>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">Полезное</div>
+    <h1>Блог о <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">тренировках</span></h1>
+    <p>Без воды и «волшебных таблеток». Пишу то, что реально работает у моих учеников. Читайте прямо здесь.</p>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТЫ УЧЕНИКОВ: до/после -->
+<section class="section--tight">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <div class="eyebrow">Результаты</div>
+      <h2 class="section__title">До и после</h2>
+      <p class="section__sub">Перетащите ползунок. Сейчас здесь демо — замените на реальные фото ученика (с его согласия) в полный рост.</p>
+    </div>
+    <div class="ba-slider reveal">
+      <div class="ba-before"><span class="ba-label">До</span></div>
+      <div class="ba-after"><span class="ba-label">После</span></div>
+      <div class="ba-handle"></div>
+      <div class="ba-tag">Анна · 3 месяца · силовая + питание · −8 кг</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid-3">
+      <a class="post-card reveal" href="#start"><div class="post-card__cover">01</div><div class="post-card__body"><div class="post-card__meta">Новичкам · 6 мин</div><h3>С чего начать новичку в зале</h3><p>Первые шаги без ошибок: как не перегореть за неделю и заложить привычку.</p><span class="more">Читать →</span></div></a>
+      <a class="post-card reveal" href="#frequency"><div class="post-card__cover">02</div><div class="post-card__body"><div class="post-card__meta">Планирование · 5 мин</div><h3>Сколько раз в неделю тренироваться</h3><p>2, 3 или 5? Разбираем, что даёт результат и почему больше — не всегда лучше.</p><span class="more">Читать →</span></div></a>
+      <a class="post-card reveal" href="#nutrition"><div class="post-card__cover">03</div><div class="post-card__body"><div class="post-card__meta">Питание · 7 мин</div><h3>Питание при похудении без срывов</h3><p>Как есть с дефицитом калорий, не голодать и не сорваться на выходных.</p><span class="more">Читать →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article id="start" class="article reveal">
+      <div class="eyebrow">Новичкам</div>
+      <h1 style="font-size:clamp(28px,4.6vw,40px)">С чего начать новичку в зале</h1>
+      <p style="color:var(--ink-soft)">2 июня 2026 · <span data-bind="name">Имя Фамилия</span></p>
+      <p>Главная ошибка новичка — не отсутствие мотивации, а её избыток в первую неделю. Человек приходит, выкладывается на 200%, получает крепатуру на три дня, бросает. Задача первых недель — не «убиться», а построить привычку и научить тело двигаться правильно.</p>
+      <h2>Три правила старта</h2>
+      <ul>
+        <li><b>Техника важнее веса.</b> Пустой гриф с идеальной техникой полезнее, чем большой вес с округлённой спиной.</li>
+        <li><b>Начинайте с 2–3 тренировок в неделю.</b> Телу нужно восстановление — именно в отдыхе растут мышцы.</li>
+        <li><b>Ведите дневник.</b> Записывайте упражнения, веса и самочувствие. Прогресс, который видно, мотивирует продолжать.</li>
+      </ul>
+      <blockquote>Лучшая программа — та, которую вы реально выполняете. Стабильные 3 тренировки в неделю обгонят «идеальный план», брошенный через месяц.</blockquote>
+      <h3>Что делать на первом занятии</h3>
+      <p>Разминка 8–10 минут, база на крупные мышечные группы (приседания, тяга, жим — в доступной амплитуде), лёгкая заминка и растяжка. Никакого «до отказа» — уходите с чувством, что могли бы сделать ещё. Это и есть правильная нагрузка на старте.</p>
+      <div class="share-row"><span>Поделиться статьёй:</span>
+        <a class="share-chip share-chip--tg" data-share-tg data-url="#start" data-title="С чего начать новичку в зале — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+        <a class="share-chip share-chip--wa" data-share-wa data-url="#start" data-title="С чего начать новичку в зале — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg>WhatsApp</a>
+      </div>
+    </article>
+
+    <hr style="border:0;border-top:1px solid var(--line);margin:50px 0" />
+
+    <article id="frequency" class="article reveal">
+      <div class="eyebrow">Планирование</div>
+      <h1 style="font-size:clamp(28px,4.6vw,40px)">Сколько раз в неделю тренироваться</h1>
+      <p style="color:var(--ink-soft)">20 июня 2026 · <span data-bind="name">Имя Фамилия</span></p>
+      <p>Ответ зависит от цели, стажа и восстановления, но для большинства людей золотая середина — <b>3 тренировки в неделю</b>. Этого достаточно, чтобы прогрессировать, и при этом реально совмещать с работой и жизнью.</p>
+      <h2>Ориентиры по целям</h2>
+      <ul>
+        <li><b>Здоровье и тонус:</b> 2–3 раза в неделю, чередуя силовую и растяжку/йогу.</li>
+        <li><b>Похудение:</b> 3–4 раза — 2–3 силовых + кардио/HIIT, плюс дефицит калорий в питании.</li>
+        <li><b>Рост мышц:</b> 3–5 раз при достаточном сне и питании, с грамотным распределением нагрузки.</li>
+      </ul>
+      <p>Важнее частоты — восстановление. Если вы не высыпаетесь и мало едите, 5 тренировок навредят сильнее, чем помогут. Слушайте тело: постоянная усталость и падение результатов — сигнал добавить отдых.</p>
+      <blockquote>Тренировка — это стимул, а рост происходит во сне и на кухне. Недосып обесценивает любой зал.</blockquote>
+      <div class="share-row"><span>Поделиться статьёй:</span>
+        <a class="share-chip share-chip--tg" data-share-tg data-url="#frequency" data-title="Сколько раз в неделю тренироваться — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+        <a class="share-chip share-chip--wa" data-share-wa data-url="#frequency" data-title="Сколько раз в неделю тренироваться — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg>WhatsApp</a>
+      </div>
+    </article>
+
+    <hr style="border:0;border-top:1px solid var(--line);margin:50px 0" />
+
+    <article id="nutrition" class="article reveal">
+      <div class="eyebrow">Питание</div>
+      <h1 style="font-size:clamp(28px,4.6vw,40px)">Питание при похудении: без диет и срывов</h1>
+      <p style="color:var(--ink-soft)">8 июля 2026 · <span data-bind="name">Имя Фамилия</span></p>
+      <p>Жёсткие диеты не работают вдолгую: организм сопротивляется, а сорваться на «запретном» — вопрос времени. Похудение — это небольшой устойчивый дефицит калорий, который можно держать месяцами без страданий.</p>
+      <h2>Что действительно важно</h2>
+      <ul>
+        <li><b>Дефицит калорий</b> — 10–20% от нормы. Резать вдвое не нужно и вредно.</li>
+        <li><b>Белок</b> в каждом приёме пищи — сохраняет мышцы и хорошо насыщает.</li>
+        <li><b>Овощи и клетчатка</b> — объём еды при малых калориях, стабильное чувство сытости.</li>
+        <li><b>Вода и сон</b> — недооценённые, но решающие факторы аппетита и восстановления.</li>
+      </ul>
+      <h3>Правило 80/20</h3>
+      <p>80% рациона — простая цельная еда, 20% — то, что любите, вписанное в норму калорий. Так вы не чувствуете себя в тюрьме и не срываетесь. Один десерт не испортит результат — его портит только систематическое переедание.</p>
+      <blockquote>Лучшая диета — та, которой можно придерживаться и через полгода. Устойчивость важнее скорости.</blockquote>
+      <div class="share-row"><span>Поделиться статьёй:</span>
+        <a class="share-chip share-chip--tg" data-share-tg data-url="#nutrition" data-title="Питание при похудении без срывов — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+        <a class="share-chip share-chip--wa" data-share-wa data-url="#nutrition" data-title="Питание при похудении без срывов — Студия PULSE"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg>WhatsApp</a>
+      </div>
+      <div class="mt-24"><a href="#" data-book class="btn btn--accent btn--lg">Хочу план под свою цель →</a></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col"><div style="font-family:var(--font-disp);font-weight:800" data-bind="studio">Студия PULSE</div><span style="color:var(--ink-soft);font-size:14px" data-bind="footerCopy">© 2026</span></div>
+    <div class="footer__col"><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="abonementy.html">Абонементы</a></div>
+    <div class="footer__col"><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a><a href="politika.html">Политика конфиденциальности</a></div>
+    <div class="footer__col"><div class="footer__soc">
+      <a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+      <a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+    </div></div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#" data-book class="mc-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Запись</a>
+  <a href="#" data-social="whatsapp" class="mc-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+  <a href="#" data-social="telegram" class="mc-tg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+  <a href="tel:+70000000000" data-tel class="mc-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>Звонок</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

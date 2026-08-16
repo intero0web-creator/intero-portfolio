@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Репетитор — подготовка к ЕГЭ и ОГЭ</title>
+<meta name="description" content="Частный репетитор: математика, русский, английский. Подготовка к ЕГЭ, ОГЭ и вузу." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Репетитор — подготовка к ЕГЭ и ОГЭ" />
+<meta property="og:description" content="Математика, русский, английский. Первый урок бесплатно." />
+<meta property="og:image" content="og.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Репетитор","description":"Подготовка к ЕГЭ и ОГЭ. Математика, русский, английский.","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"180"}}
+</script>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="nav"><div class="container nav__inner">
+  <a href="#top" class="nav__logo">
+    <div class="nav__mark" data-bind="logoInitial">Р</div>
+    <div class="nav__text"><b data-bind="name">Имя Фамилия</b><em data-bind="tagline">подготовка к ЕГЭ и ОГЭ</em></div>
+  </a>
+  <nav class="nav__links">
+    <a href="#directions">Предметы</a><a href="#calc">Прогноз баллов</a><a href="#quiz">Тест уровня</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a>
+  </nav>
+  <a href="#form" class="btn btn--primary">Пробный урок</a>
+</div></header>
+
+<section class="hero" id="top"><div class="container hero__row">
+  <div>
+    <span class="eyebrow">Первый урок бесплатно</span>
+    <h1>Подготовка к ЕГЭ<br/>с ростом <em>+38 баллов</em></h1>
+    <p class="hero__lead">Частный репетитор с 8-летним опытом. Математика, русский, английский. Индивидуально или в паре, онлайн или очно.</p>
+    <div class="hero__cta">
+      <a href="#form" class="btn btn--primary btn--lg">Записаться на пробный урок</a>
+      <a href="#calc" class="btn btn--outline btn--lg">Узнать свой прогноз →</a>
+    </div>
+    <div class="hero__proof">
+      <div><b>500+</b>учеников</div>
+      <div><b>+38</b>средний прирост</div>
+      <div><b>92%</b>сдали на 70+</div>
+      <div><b>8&nbsp;лет</b>опыта</div>
+    </div>
+  </div>
+  <div class="globe-wrap" aria-hidden="true">
+    <canvas id="globe3d"></canvas>
+    <div class="globe-hint">Зажмите и покрутите</div>
+  </div>
+</div></section>
+
+<section class="section" id="directions"><div class="container">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">Что <em>преподаю</em></h2>
+      <p class="section__sub">Готовлю к ЕГЭ, ОГЭ и олимпиадам. Работаю с 6 класса.</p>
+    </div>
+  </div>
+  <div class="bento">
+    <div class="tile tile--half">
+      <div class="subj">
+        <div class="subj__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+        <h3>Математика</h3>
+      </div>
+      <ul class="subj-list">
+        <li>Профильная математика ЕГЭ<b>+42 балла</b></li>
+        <li>Базовая математика ЕГЭ<b>с «5»</b></li>
+        <li>ОГЭ 9 класс<b>с «5»</b></li>
+        <li>Олимпиады «Физтех», «Ломоносов»<b>призёры</b></li>
+      </ul>
+    </div>
+    <div class="tile tile--half">
+      <div class="subj">
+        <div class="subj__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h14a2 2 0 012 2v14H6a2 2 0 01-2-2z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>Русский язык</h3>
+      </div>
+      <ul class="subj-list">
+        <li>ЕГЭ русский<b>+35 баллов</b></li>
+        <li>Итоговое сочинение<b>«зачёт» гарантирован</b></li>
+        <li>ОГЭ 9 класс<b>с «5»</b></li>
+      </ul>
+    </div>
+    <div class="tile tile--half">
+      <div class="subj">
+        <div class="subj__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10c-3-3-4-6-4-10s1-7 4-10z"/></svg></div>
+        <h3>Английский язык</h3>
+      </div>
+      <ul class="subj-list">
+        <li>ЕГЭ английский<b>+40 баллов</b></li>
+        <li>Разговорный от A2 до C1<b>полгода</b></li>
+        <li>IELTS 6.5–8.0<b>сертификаты</b></li>
+      </ul>
+    </div>
+    <div class="tile tile--half tile--accent">
+      <div class="tile__num">Онлайн<small> или очно</small></div>
+      <h3>Удобный формат</h3>
+      <p>Zoom с интерактивной доской или занятия дома у ученика в пределах города.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="calc"><div class="container">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">Прогноз <em>роста баллов</em></h2>
+      <p class="section__sub">Введите текущий балл и длительность подготовки — увидите реалистичный прогноз.</p>
+    </div>
+  </div>
+  <div class="calc">
+    <div class="calc__row">
+      <div>
+        <label class="calc__label">Ваш текущий балл (20–100)</label>
+        <input type="number" id="score-cur" class="calc__input" value="55" min="20" max="100" step="1"/>
+        <label class="calc__label" style="margin-top:16px;">Длительность подготовки: <b id="months-v" style="color:var(--acc-2)">6 мес.</b></label>
+        <input type="range" id="score-months" class="calc__slider" min="1" max="12" value="6"/>
+      </div>
+      <div class="calc__result">
+        <b id="score-out">80</b>
+        <span>прогнозируемый балл ЕГЭ</span>
+      </div>
+    </div>
+    <div class="calc__chart">
+      <svg viewBox="0 0 560 200">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffb547"/><stop offset="1" stop-color="#22c98b"/>
+          </linearGradient>
+          <linearGradient id="chartArea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#22c98b" stop-opacity="0.5"/>
+            <stop offset="1" stop-color="#22c98b" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="40" y1="180" x2="540" y2="180" class="chart-axis"/>
+        <line x1="40" y1="30" x2="40" y2="180" class="chart-axis"/>
+        <text x="10" y="35" class="chart-label">100</text>
+        <text x="14" y="110" class="chart-label">60</text>
+        <text x="14" y="185" class="chart-label">20</text>
+        <text x="40" y="196" class="chart-label">старт</text>
+        <text x="500" y="196" class="chart-label">финиш</text>
+        <path id="chart-area" class="chart-area" d=""/>
+        <path id="chart-line" class="chart-line" d=""/>
+        <circle id="chart-dot" r="6" fill="#22c98b" stroke="#0a1628" stroke-width="3"/>
+      </svg>
+    </div>
+    <p style="text-align:center;color:var(--mute);font-size:13px;margin-top:14px">Прогноз основан на типовых результатах учеников. Конкретный результат зависит от регулярности занятий.</p>
+  </div>
+</div></section>
+
+<section class="section" id="quiz"><div class="container">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">Тест: <em>какой у тебя уровень?</em></h2>
+      <p class="section__sub">4 быстрых вопроса — узнаешь свой стартовый уровень и что делать дальше.</p>
+    </div>
+  </div>
+  <div class="quiz" id="quiz"></div>
+</div></section>
+
+<section class="section" id="reviews"><div class="container">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">Результаты <em>учеников</em></h2>
+      <p class="section__sub">Все данные — реальные (замените имена и баллы на свои).</p>
+    </div>
+  </div>
+  <div class="reviews">
+    <blockquote class="review">
+      <div class="review__head">
+        <div class="review__avatar review__avatar--a">М</div>
+        <div class="review__who"><b>Мария</b><span>ученица · Москва</span></div>
+        <div class="review__src">★ 5.0</div>
+      </div>
+      <div class="review__scores"><span class="review__before">54</span><span class="review__arrow">→</span><span class="review__after">92</span></div>
+      <p>«Начинали в 10-м классе с проблемной математики. К ЕГЭ я не только сдала, но и прошла в топ-вуз на бюджет.»</p>
+      <footer>математика · ЕГЭ 2025</footer>
+    </blockquote>
+    <blockquote class="review">
+      <div class="review__head">
+        <div class="review__avatar review__avatar--b">А</div>
+        <div class="review__who"><b>Анна К.</b><span>мама ученика · СПб</span></div>
+        <div class="review__src">★ 5.0</div>
+      </div>
+      <div class="review__scores"><span class="review__before">62</span><span class="review__arrow">→</span><span class="review__after">88</span></div>
+      <p>«Русский был слабым местом. За полгода разобрали все типы заданий — сын написал сочинение на максимум.»</p>
+      <footer>русский язык · ЕГЭ 2025</footer>
+    </blockquote>
+    <blockquote class="review">
+      <div class="review__head">
+        <div class="review__avatar review__avatar--c">П</div>
+        <div class="review__who"><b>Полина</b><span>ученица · Казань</span></div>
+        <div class="review__src">★ 5.0</div>
+      </div>
+      <div class="review__scores"><span class="review__before">45</span><span class="review__arrow">→</span><span class="review__after">85</span></div>
+      <p>«Английский я почти не знала. За год дошла до уровня, чтобы сдать ЕГЭ на 85 и подать на международную программу.»</p>
+      <footer>английский · ЕГЭ 2024</footer>
+    </blockquote>
+  </div>
+  <div class="reviews-more">
+    <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#22c98b"><path d="M21.35 11.1H12v3.8h5.35c-.5 2.4-2.5 4-5.35 4-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.5 0 2.8.55 3.85 1.45l2.7-2.7C16.85 4.35 14.6 3.3 12 3.3c-4.85 0-8.8 3.95-8.8 8.8s3.95 8.8 8.8 8.8c5.1 0 8.5-3.6 8.5-8.65 0-.55-.05-1.1-.15-1.15z"/></svg>Все отзывы в Google</a>
+    <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#ff3333"><path d="M13.5 3v18l6-9-6-9zM4.5 3v18h4V3h-4z"/></svg>Отзывы на Яндексе</a>
+  </div>
+</div></section>
+
+<section class="section" id="prices"><div class="container">
+  <div class="section__head">
+    <div>
+      <h2 class="section__title">Форматы <em>занятий</em></h2>
+      <p class="section__sub">Цены — шаблонные. При абонементе — скидка 10–15%.</p>
+    </div>
+  </div>
+  <div class="prices">
+    <div class="price">
+      <h3>Разовое занятие</h3>
+      <div class="price__val">2 500 ₽<small> / 60 мин</small></div>
+      <ul>
+        <li>Индивидуальный формат</li>
+        <li>Онлайн или очно</li>
+        <li>Домашнее задание</li>
+      </ul>
+      <a href="#form" class="btn btn--outline btn--wide">Записаться</a>
+    </div>
+    <div class="price price--pop">
+      <div class="price__badge">популярно</div>
+      <h3>Абонемент на месяц</h3>
+      <div class="price__val">18 000 ₽<small> / 8 занятий</small></div>
+      <ul>
+        <li>8 занятий по 90 минут</li>
+        <li>Разбор ДЗ в чате</li>
+        <li>Итоговый пробник в конце</li>
+        <li>Скидка 10%</li>
+      </ul>
+      <a href="#form" class="btn btn--primary btn--wide">Записаться</a>
+    </div>
+    <div class="price">
+      <h3>Годовая программа</h3>
+      <div class="price__val">от 8 500 ₽<small> / месяц</small></div>
+      <ul>
+        <li>Полный курс до ЕГЭ / ОГЭ</li>
+        <li>Гарантия результата</li>
+        <li>Личный план обучения</li>
+        <li>Скидка 15%</li>
+      </ul>
+      <a href="#form" class="btn btn--outline btn--wide">Обсудить</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="form"><div class="container">
+  <div class="section__head" style="justify-content:center;text-align:center">
+    <div>
+      <h2 class="section__title">Записаться на <em>пробный урок</em></h2>
+      <p class="section__sub">Первый урок — бесплатно. Определим уровень и составим план.</p>
+    </div>
+  </div>
+  <form class="form-wrap" id="lead-form" novalidate>
+    <label>Имя ученика или родителя<input type="text" name="name" required placeholder="Как обращаться"/></label>
+    <label>Телефон<input type="tel" name="phone" required placeholder="+7 ___ ___-__-__"/></label>
+    <label>Предмет
+      <select name="subject"><option>Математика (профиль)</option><option>Математика (база)</option><option>Русский язык</option><option>Английский язык</option><option>Ещё не решил(а)</option></select>
+    </label>
+    <label>Класс
+      <select name="grade"><option>6</option><option>7</option><option>8</option><option>9 (ОГЭ)</option><option selected>10</option><option>11 (ЕГЭ)</option></select>
+    </label>
+    <label>Удобная дата пробного<input type="date" name="date" id="lead-date"/></label>
+    <label class="check"><input type="checkbox" required/><span>Согласен(на) с <a href="politika.html" target="_blank">обработкой персональных данных</a></span></label>
+    <button type="submit" class="btn btn--primary btn--wide btn--lg">Отправить заявку</button>
+    <div class="form-thanks" id="form-thanks" hidden>Спасибо! Свяжусь с вами сегодня.</div>
+  </form>
+</div></section>
+
+<section class="section"><div class="container">
+  <div class="section__head" style="justify-content:center;text-align:center">
+    <div><h2 class="section__title">Как ещё <em>связаться</em></h2></div>
+  </div>
+  <div class="contacts">
+    <div class="contact"><span>Телефон</span><a href="tel:+70000000000" data-tel data-bind="phoneDisplay">+7 (000) 000-00-00</a></div>
+    <div class="contact"><span>WhatsApp</span><a href="#" data-social="whatsapp" target="_blank">Написать</a></div>
+    <div class="contact"><span>Telegram</span><a href="#" data-social="telegram" target="_blank">Написать</a></div>
+    <div class="contact"><span>Email</span><a href="mailto:info@example.com" data-mail data-bind="email">info@example.com</a></div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container">
+  <div><span data-bind="footerLine">© 2026</span> · <span data-bind="name">Имя Фамилия</span> · <a href="politika.html">Политика конфиденциальности</a></div>
+</div></footer>
+
+<script src="config.js"></script>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

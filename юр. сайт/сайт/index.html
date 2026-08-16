@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Адвокат — юридическая помощь физическим лицам</title>
+<meta name="description" content="Частная юридическая практика: договоры, споры, наследство, семейные дела. Первая консультация бесплатно." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ваш адвокат — юридическая помощь физическим лицам" />
+<meta property="og:description" content="Договоры, споры, наследство, семейные дела. Первая консультация бесплатно." />
+<meta property="og:image" content="https://vash-advokat.netlify.app/og.svg" />
+<meta property="og:url" content="https://vash-advokat.netlify.app/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="styles.css" />
+<!-- Schema.org: карточка юриста. ЗАМЕНИТЕ значения на свои (имя, телефон, адрес, url). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "name": "Ваш адвокат",
+  "description": "Частная юридическая практика для физических лиц: семейные, жилищные, наследственные и договорные споры.",
+  "url": "https://vash-advokat.netlify.app/",
+  "telephone": "+70000000000",
+  "email": "info@example.com",
+  "areaServed": "RU",
+  "priceRange": "₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "улица, дом, офис",
+    "addressLocality": "Город",
+    "addressCountry": "RU"
+  }
+}
+</script>
+</head>
+<body class="home">
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" data-bind="logoInitial">Ю</span>
+      <span class="nav__logo-text"><span data-bind="shortName">Фамилия</span><em data-bind="logoTagline">юридическая практика</em></span>
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html" class="is-active">Главная</a>
+      <a href="uslugi.html">Услуги</a>
+      <a href="o-yuriste.html">О юристе</a>
+      <a href="keysy.html">Кейсы</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a>
+      <a href="kontakty.html" class="btn btn--outline nav__cta">Консультация</a>
+      <div class="nav__social">
+        <a href="#" data-social="telegram" class="soc-ic soc-ic--tg" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+        <a href="#" data-social="whatsapp" class="soc-ic soc-ic--wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Главная</a>
+  <a href="uslugi.html">Услуги</a>
+  <a href="o-yuriste.html">О юристе</a>
+  <a href="keysy.html">Кейсы</a>
+  <a href="kontakty.html">Контакты</a>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__blob hero__blob--1"></span>
+    <span class="hero__blob hero__blob--2"></span>
+    <span class="hero__blob hero__blob--3"></span>
+  </div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="free-badge"><span class="dot"></span> Первая консультация — бесплатно</div>
+      <h1 class="hero__title">
+        <span class="stone">Защита ваших</span>
+        <span class="stone">интересов —</span>
+        <span class="stone stone--accent">по закону</span>
+      </h1>
+      <p class="hero__lead">
+        Частная практика для физических лиц: договорные, семейные, жилищные
+        и наследственные споры. Без «воды» — честная оценка и результат.
+      </p>
+      <div class="hero__actions">
+        <a href="kontakty.html" class="btn btn--primary">Записаться на консультацию</a>
+        <a href="uslugi.html" class="btn btn--ghost">Услуги и калькулятор →</a>
+      </div>
+      <div class="hero__meta">
+        <div><b>17+</b><span>лет практики</span></div>
+        <div><b>420+</b><span>выигранных дел</span></div>
+        <div><b>94%</b><span>дел в пользу клиента</span></div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <svg class="scales" id="scales" viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6e3b6"/><stop offset="0.5" stop-color="#d8b877"/><stop offset="1" stop-color="#9c7f45"/>
+          </linearGradient>
+          <linearGradient id="goldSoft" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#b8965a"/><stop offset="0.5" stop-color="#f2dda9"/><stop offset="1" stop-color="#b8965a"/>
+          </linearGradient>
+          <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="190" cy="410" rx="78" ry="13" fill="none" stroke="url(#goldSoft)" stroke-width="4"/>
+          <path d="M158 356 L222 356 L238 398 L142 398 Z" fill="none" stroke="url(#gold)" stroke-width="4"/>
+          <line x1="190" y1="356" x2="190" y2="86" stroke="url(#gold)" stroke-width="7"/>
+          <ellipse cx="190" cy="250" rx="10" ry="4" fill="none" stroke="url(#goldSoft)" stroke-width="3"/>
+          <ellipse cx="190" cy="170" rx="10" ry="4" fill="none" stroke="url(#goldSoft)" stroke-width="3"/>
+          <circle cx="190" cy="70" r="10" fill="url(#gold)"/>
+          <circle cx="190" cy="92" r="7" fill="url(#gold)"/>
+          <g id="scales-beam">
+            <line x1="66" y1="92" x2="314" y2="92" stroke="url(#goldSoft)" stroke-width="6"/>
+            <circle cx="66" cy="92" r="6" fill="url(#gold)"/>
+            <circle cx="314" cy="92" r="6" fill="url(#gold)"/>
+            <circle cx="190" cy="92" r="5" fill="#f2dda9"/>
+            <g id="scales-pan-l">
+              <line x1="66" y1="94" x2="34" y2="238" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <line x1="66" y1="94" x2="66" y2="240" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <line x1="66" y1="94" x2="98" y2="238" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <path d="M26 240 Q66 280 106 240" fill="none" stroke="url(#gold)" stroke-width="4"/>
+              <ellipse cx="66" cy="240" rx="40" ry="8" fill="none" stroke="url(#goldSoft)" stroke-width="3"/>
+            </g>
+            <g id="scales-pan-r">
+              <line x1="314" y1="94" x2="282" y2="238" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <line x1="314" y1="94" x2="314" y2="240" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <line x1="314" y1="94" x2="346" y2="238" stroke="url(#goldSoft)" stroke-width="2.4"/>
+              <path d="M274 240 Q314 280 354 240" fill="none" stroke="url(#gold)" stroke-width="4"/>
+              <ellipse cx="314" cy="240" rx="40" ry="8" fill="none" stroke="url(#goldSoft)" stroke-width="3"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="free-strip">
+  <div class="container free-strip__inner">
+    <b>Первая консультация — бесплатно</b>
+    <span>Оценю перспективы вашего дела и честно скажу, стоит ли идти в суд.</span>
+    <a href="kontakty.html" class="btn btn--primary btn--sm">Записаться</a>
+  </div>
+</div>
+
+<section class="section why" id="why">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Почему выбирают</div>
+      <h2 class="section__title">Работаю так, чтобы вам захотелось<br/>ко мне вернуться</h2>
+    </div>
+    <div class="services__grid">
+      <div class="svc why__card">
+        <div class="svc__num">Опыт</div>
+        <h3>17 лет практики</h3>
+        <p>Веду дела только физических лиц и занимаюсь каждым делом лично, а не передаю «помощникам».</p>
+      </div>
+      <div class="svc why__card">
+        <div class="svc__num">Честность</div>
+        <h3>94% в пользу клиента</h3>
+        <p>Берусь за дело, только если вижу реальные перспективы. Никаких пустых обещаний.</p>
+      </div>
+      <div class="svc why__card">
+        <div class="svc__num">Прозрачность</div>
+        <h3>Фиксированная цена</h3>
+        <p>Стоимость в договоре не меняется. Никаких «дополнительных» счетов посреди дела.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight services">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Услуги</div>
+      <h2 class="section__title">С чем я помогаю</h2>
+      <p class="section__sub">Полный список услуг с ценами и калькулятором — на отдельной странице.</p>
+    </div>
+    <div class="services__grid">
+      <article class="svc"><div class="svc__num">01</div><h3>Семейные споры</h3><p>Развод, раздел имущества, дети, взыскание алиментов.</p></article>
+      <article class="svc"><div class="svc__num">02</div><h3>Наследство</h3><p>Оформление, споры, восстановление сроков, оспаривание завещания.</p></article>
+      <article class="svc"><div class="svc__num">03</div><h3>Договорные споры</h3><p>Взыскание долгов, возврат средств, защита прав потребителей.</p></article>
+    </div>
+    <div style="margin-top:40px"><a href="uslugi.html" class="btn btn--outline">Все услуги и цены →</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div data-bind="footerCopy">© 2026 Адвокатский кабинет</div>
+    <div data-bind="footerReg">Реестровый номер · Адвокатская палата</div>
+    <div><a href="politika.html">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<a href="tel:+70000000000" class="write-fab" data-tel aria-label="Напишите нам">
+  <span class="write-fab__label">Напишите</span>
+  <span class="write-fab__circle">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/>
+    </svg>
+  </span>
+</a>
+
+<div class="mobile-cta">
+  <a href="tel:+70000000000" class="mc-call" data-tel><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>Позвонить</a>
+  <a href="#" class="mc-wa" data-social="whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>WhatsApp</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecd1a6"/><stop offset="0.5" stop-color="#d4b48c"/><stop offset="1" stop-color="#8c7148"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="#0d0d10"/>
+  <circle cx="1050" cy="120" r="200" fill="#d4b48c" opacity="0.14"/>
+  <text x="90" y="290" font-family="Georgia, serif" font-size="88" font-style="italic" font-weight="700" fill="url(#ac)">Фотограф</text>
+  <text x="90" y="370" font-family="Arial, sans-serif" font-size="34" fill="#b4ada0">Портрет · Свадьба · Предметная съёмка</text>
+  <text x="90" y="440" font-family="Arial, sans-serif" font-size="26" fill="#7c7568">Съёмка, ретушь и подготовка к печати</text>
+</svg>

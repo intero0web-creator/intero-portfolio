@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Студия PULSE — программы тренировок</title>
+<meta name="description" content="Силовые, йога, HIIT, растяжка и реабилитация. Персональные и мини-группы. Выберите программу под свою цель." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Программы тренировок — Студия PULSE" />
+<meta property="og:description" content="Силовые, йога, HIIT, растяжка и реабилитация под вашу цель." />
+<meta property="og:image" content="og.png" />
+<meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Главная","item":"index.html"},
+    {"@type":"ListItem","position":2,"name":"Программы","item":"programmy.html"}
+  ]
+}
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" data-bind="logoInitial">P</span>
+      <span class="nav__logo-text"><b data-bind="studio">Студия PULSE</b><em data-bind="tagline">персональный тренинг</em></span>
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html">Главная</a>
+      <a href="programmy.html" class="is-active">Программы</a>
+      <a href="raspisanie.html">Расписание</a>
+      <a href="o-trenere.html">Тренер</a>
+      <a href="abonementy.html">Абонементы</a>
+      <a href="blog.html">Блог</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a>
+      <div class="nav__social"><a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a><a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg></a></div>
+      <a href="#" data-book class="btn btn--accent nav__cta">Записаться</a>
+      <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Главная</a><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="o-trenere.html">Тренер</a><a href="abonementy.html">Абонементы</a><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a>
+</div>
+
+<div class="container"><div class="crumbs"><a href="index.html">Главная</a> / Программы</div></div>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">Направления</div>
+    <h1>Программы <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">тренировок</span></h1>
+    <p>Каждая программа строится под вашу цель и уровень. Ниже — что входит, для кого подходит и какой результат ждать.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="grid-2">
+      <article id="strength" class="card prog reveal">
+        <span class="prog__tag">Сила</span>
+        <div class="svc__ico" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--grad-soft);margin-bottom:16px"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2" transform="rotate(45 12 12)"/><path d="M4 9l-1 1 2 2M20 15l1-1-2-2"/></svg></div>
+        <h3>Силовые тренировки</h3>
+        <p>Рост силы и мышечной массы, здоровье спины, жиросжигание за счёт метаболизма. Свободные веса + тренажёры.</p>
+        <ul><li>Диагностика и постановка техники</li><li>Прогрессия нагрузки по неделям</li><li>Акцент на осанку и корпус</li><li>2–3 занятия в неделю</li></ul>
+        <div class="mt-24"><a href="#" data-book class="btn btn--outline">Записаться на силовую →</a></div>
+      </article>
+
+      <article id="yoga" class="card prog reveal">
+        <span class="prog__tag">Баланс</span>
+        <div class="svc__ico" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--grad-soft);margin-bottom:16px"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2"/><path d="M12 7v6m0 0l-4 5m4-5l4 5M6 10h12"/></svg></div>
+        <h3>Йога &amp; растяжка</h3>
+        <p>Гибкость, мобильность суставов, дыхание и антистресс. Бережно для спины и коленей, подходит новичкам.</p>
+        <ul><li>Хатха и мягкая виньяса</li><li>Работа с зажимами шеи и поясницы</li><li>Дыхательные практики</li><li>Улучшение сна и восстановления</li></ul>
+        <div class="mt-24"><a href="#" data-book class="btn btn--outline">Записаться на йогу →</a></div>
+      </article>
+
+      <article id="hiit" class="card prog reveal">
+        <span class="prog__tag">Жиросжигание</span>
+        <div class="svc__ico" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--grad-soft);margin-bottom:16px"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c1 3-1 4-1 6a3 3 0 0 0 6 0c0-1 0-2-1-3 3 2 5 5 5 9a9 9 0 1 1-15-6c2-2 6-3 7-6z"/></svg></div>
+        <h3>HIIT-интервалы</h3>
+        <p>Высокоинтенсивные интервалы: максимум результата за 30–40 минут. Выносливость, тонус, быстрый расход калорий.</p>
+        <ul><li>Круговые и табата-форматы</li><li>Контроль пульса</li><li>Минимум оборудования</li><li>Заряд энергии и дисциплина</li></ul>
+        <div class="mt-24"><a href="#" data-book class="btn btn--outline">Записаться на HIIT →</a></div>
+      </article>
+
+      <article id="rehab" class="card prog reveal">
+        <span class="prog__tag">Здоровье</span>
+        <div class="svc__ico" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--grad-soft);margin-bottom:16px"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-9 10-9 10z"/></svg></div>
+        <h3>Реабилитация &amp; спина</h3>
+        <p>Мягкое восстановление после травм, работа с осанкой и хронической болью. По согласованию с вашим врачом.</p>
+        <ul><li>ЛФК и стабилизация корпуса</li><li>Индивидуальный темп</li><li>Профилактика обострений</li><li>Возврат к активной жизни</li></ul>
+        <div class="mt-24"><a href="#" data-book class="btn btn--outline">Обсудить программу →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Не знаете, что выбрать?</h2>
+      <p>Приходите на бесплатную диагностику — подберём формат под вашу цель, здоровье и график.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="#" data-book class="btn btn--accent btn--lg">Записаться на диагностику</a>
+        <a href="abonementy.html" class="btn btn--soft btn--lg">Цены и абонементы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col"><div style="font-family:var(--font-disp);font-weight:800" data-bind="studio">Студия PULSE</div><span style="color:var(--ink-soft);font-size:14px" data-bind="footerCopy">© 2026</span></div>
+    <div class="footer__col"><a href="programmy.html">Программы</a><a href="raspisanie.html">Расписание</a><a href="abonementy.html">Абонементы</a></div>
+    <div class="footer__col"><a href="blog.html">Блог</a><a href="kontakty.html">Контакты</a><a href="politika.html">Политика конфиденциальности</a></div>
+    <div class="footer__col"><div class="footer__soc">
+      <a href="#" data-social="telegram" class="soc-ic" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+      <a href="#" data-social="whatsapp" class="soc-ic" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.4-.5.8-1 .3-1.9-.2-.4-.9-2.1-1.2-2.7-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 3 1.3 3 .9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></a>
+    </div></div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#" data-book class="mc-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Запись</a>
+  <a href="#" data-social="whatsapp" class="mc-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3.8-1.4 1.4-2 1.4-.5.1-1.2.1-3.6-.8-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.6 1 2.3 1 2.5.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.2.2-.2.4-.1.6.2.3.8 1.3 1.7 2 1.1.9 2 1.2 2.3 1.4.3.1.5.1.7-.2.2-.2.6-.8.9-1.1.2-.3.4-.2.7-.1.3.1 1.7.8 2 .9.3.1.5.2.6.3z"/></svg>WhatsApp</a>
+  <a href="#" data-social="telegram" class="mc-tg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg>Telegram</a>
+  <a href="tel:+70000000000" data-tel class="mc-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>Звонок</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

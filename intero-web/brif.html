@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Бриф на разработку сайта — INTERO</title>
+<meta name="description" content="Заполните бриф за 15 минут — на выходе получите готовое ТЗ, которое можно отправить в Telegram или скачать файлом. Пропускать вопросы можно, автосохранение." />
+<meta name="robots" content="noindex,follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<meta name="theme-color" content="#141821" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__dot"></span>INTERO</a>
+    <nav class="nav__menu">
+      <a href="index.html#works">Работы</a>
+      <a href="index.html#calc">Калькулятор</a>
+      <a href="index.html#price">Цены</a>
+      <a href="brif.html" class="is-active">Бриф</a>
+      <a href="index.html#faq">Вопросы</a>
+      <a href="index.html#contact">Контакты</a>
+    </nav>
+    <a href="https://t.me/INTERO_WEB" target="_blank" rel="noopener" class="btn btn--accent btn--sm nav__cta">Написать в Telegram</a>
+    <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#works">Работы</a><a href="index.html#calc">Калькулятор</a><a href="index.html#price">Цены</a><a href="brif.html">Бриф</a><a href="index.html#faq">Вопросы</a><a href="index.html#contact">Контакты</a>
+</div>
+<script>
+  (function(){var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');if(!b||!m)return;b.addEventListener('click',function(){m.classList.toggle('is-open');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('is-open');});});})();
+</script>
+
+<main class="brif">
+  <div class="brif__head">
+    <div class="brif__label">Бриф</div>
+    <h1>Заполните бриф — получите готовое ТЗ</h1>
+    <p class="brif__sub">Отвечайте на вопросы по порядку. Пропускать можно любые — короткое ТЗ лучше длинного с пропусками. Ответы сохраняются автоматически, можно закрыть вкладку и вернуться.</p>
+  </div>
+
+  <div class="brif__resume" id="brif-resume" hidden>
+    <span>Нашёл незаконченный бриф. Продолжить с того места, где остановились?</span>
+    <button type="button" class="btn btn--accent btn--sm" id="brif-resume-yes">Продолжить</button>
+    <button type="button" class="btn btn--ghost btn--sm" id="brif-resume-no">Начать заново</button>
+  </div>
+
+  <div id="brif-app"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© 2026 · INTERO · Сайты с интерактивом</span>
+    <a href="goroda/index.html">Города</a>
+    <a href="politika.html">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<script>
+/* =========================================================================
+   Интерактивный бриф. Чистый JS, без библиотек.
+   Данные хранятся в localStorage под ключом 'intero_brif_v1'.
+   Итог отправляется в Telegram (через буфер), WhatsApp (через URL) или
+   скачивается .txt файлом.
+   ========================================================================= */
+(function(){
+  var TG_USER = 'INTERO_WEB';
+  var WA_NUMBER = '';                   // если появится — вписать сюда в формате 79995551122
+  var KEY = 'intero_brif_v1';
+
+  var STEPS = [
+    {
+      id:'company', title:'О компании',
+      fields:[
+        {n:'name',    label:'Название компании или проекта',            type:'text',     hint:'Как называется бизнес, что пишем в заголовке сайта'},
+        {n:'about',   label:'Чем занимаетесь одним предложением',       type:'textarea', hint:'Как объясняете друзьям, чем зарабатываете'},
+        {n:'city',    label:'Город и география работы',                 type:'text',     hint:'Один город, регион, вся Россия — как есть'},
+        {n:'age',     label:'Сколько лет на рынке, если есть история',  type:'text',     hint:'Пропустите, если только запускаетесь'}
+      ]
+    },
+    {
+      id:'clients', title:'Клиенты',
+      fields:[
+        {n:'who',      label:'Кто ваш клиент? Опишите одним типажом',   type:'textarea', hint:'Возраст, пол, доход, ситуация — то, что знаете'},
+        {n:'problem',  label:'С какой болью он к вам приходит',         type:'textarea', hint:'Что случилось, из-за чего он вас ищет'},
+        {n:'objection',label:'Что мешает ему сказать «да» сразу',       type:'textarea', hint:'Цена, страх, недоверие, конкуренты — что чаще всего'}
+      ]
+    },
+    {
+      id:'goal', title:'Задача сайта',
+      fields:[
+        {n:'action',   label:'Что должен сделать посетитель на сайте',  type:'textarea', hint:'Позвонить, написать, заказать, оставить заявку — выберите главное'},
+        {n:'kpi',      label:'Сколько заявок в неделю считаете успехом',type:'text',     hint:'Хотя бы порядок цифр — 5, 20, 100'},
+        {n:'traffic',  label:'Откуда пойдут посетители',                type:'textarea', hint:'Реклама, поиск, соцсети, визитки — что уже используете'}
+      ]
+    },
+    {
+      id:'services', title:'Услуги и цены',
+      fields:[
+        {n:'list',     label:'Что продаёте — список услуг или товаров', type:'textarea', hint:'По строчке на позицию'},
+        {n:'price',    label:'Ориентировочные цены',                    type:'textarea', hint:'От/до, вилки, пакеты — как удобно'},
+        {n:'discount', label:'Есть ли акции, скидки, спецпредложения',  type:'textarea', hint:'То, что имеет смысл подсветить на сайте'}
+      ]
+    },
+    {
+      id:'competitors', title:'Конкуренты',
+      fields:[
+        {n:'sites',    label:'Три сайта конкурентов — ссылками',        type:'textarea', hint:'Не «нравятся», а те, к кому уходят ваши клиенты'},
+        {n:'better',   label:'Чем вы лучше',                            type:'textarea', hint:'Честно, без «индивидуального подхода»'},
+        {n:'worse',    label:'В чём они сильнее вас',                   type:'textarea', hint:'Это тоже полезно знать — обойдём на сайте'}
+      ]
+    },
+    {
+      id:'design', title:'Дизайн',
+      fields:[
+        {n:'likes',    label:'Сайты, дизайн которых нравится',          type:'textarea', hint:'2–3 ссылки, объяснять не нужно'},
+        {n:'dislikes', label:'Что точно не нравится',                   type:'textarea', hint:'Стилистика, цвета, шрифты — то, чего избегать'},
+        {n:'style',    label:'Стилистика: строго / дружелюбно / премиум', type:'text',   hint:'Или свой вариант в двух словах'},
+        {n:'colors',   label:'Цвета бренда, если есть',                 type:'text',     hint:'HEX или словами: «синий и белый»'}
+      ]
+    },
+    {
+      id:'materials', title:'Материалы',
+      fields:[
+        {n:'logo',     label:'Логотип: есть, нужно сделать, обойдёмся текстом?', type:'text', hint:''},
+        {n:'photos',   label:'Фото: есть свои, нужен фотограф, взять со стоков', type:'text', hint:''},
+        {n:'texts',    label:'Тексты: напишете сами или помочь',        type:'text',     hint:''}
+      ]
+    },
+    {
+      id:'structure', title:'Структура',
+      fields:[
+        {n:'pages',    label:'Какие разделы точно нужны',               type:'textarea', hint:'Главная, услуги, о нас, портфолио, контакты — что необходимо'},
+        {n:'features', label:'Функции: калькулятор, форма, квиз, онлайн-запись', type:'textarea', hint:'Что должно быть интерактивным'},
+        {n:'contacts', label:'Как принимать заявки',                    type:'text',     hint:'Telegram, WhatsApp, почта, звонки — что удобнее'}
+      ]
+    },
+    {
+      id:'org', title:'Организационное',
+      fields:[
+        {n:'deadline', label:'К какому сроку хочется получить сайт',    type:'text',     hint:'Дата или «как быстрее»'},
+        {n:'budget',   label:'Ориентировочный бюджет',                  type:'text',     hint:'Вилка, а не точная цифра'},
+        {n:'decide',   label:'Кто утверждает решения по проекту',       type:'text',     hint:'Один человек или несколько — важно знать заранее'}
+      ]
+    },
+    {
+      id:'free', title:'Свободное поле',
+      fields:[
+        {n:'notes',    label:'Что ещё важно, о чём я не спросил',       type:'textarea', hint:'Ограничения, референсы, идеи, страхи — что угодно'}
+      ]
+    }
+  ];
+
+  // ------- helpers -------
+  function $(sel, root){ return (root||document).querySelector(sel); }
+  function el(tag, attrs, kids){ var e=document.createElement(tag); for(var k in attrs){ if(k==='class') e.className=attrs[k]; else if(k==='html') e.innerHTML=attrs[k]; else e.setAttribute(k, attrs[k]); } (kids||[]).forEach(function(c){ if(typeof c==='string') e.appendChild(document.createTextNode(c)); else if(c) e.appendChild(c); }); return e; }
+  function readState(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(_){ return {}; } }
+  function saveState(s){ try{ localStorage.setItem(KEY, JSON.stringify(s)); }catch(_){ } }
+  function urlParams(){ var p={}; new URLSearchParams(location.search).forEach(function(v,k){ p[k]=v; }); return p; }
+
+  var state = readState();
+  var q = urlParams();
+  var calcCame = q.pages || q.fx || q.price;
+  if (calcCame && !state.__calc) {
+    state.__calc = {
+      pages: q.pages, fx: q.fx, urgent: q.urgent, price: q.price, days: q.days
+    };
+    // предзаполним поле пакета, если есть
+    state.services = state.services || {};
+    if (q.pages && !state.services.list) state.services.list = 'Страниц: ' + q.pages;
+  }
+  var stepIdx = state.__step || 0;
+  var app = $('#brif-app');
+
+  // resume banner: показывать, если что-то заполнено и мы на не-первом шаге
+  var hasAny = STEPS.some(function(s){
+    return state[s.id] && Object.keys(state[s.id]).some(function(k){ return String(state[s.id][k]||'').trim(); });
+  });
+  if (hasAny && stepIdx > 0) {
+    $('#brif-resume').hidden = false;
+    $('#brif-resume-yes').addEventListener('click', function(){ $('#brif-resume').hidden = true; render(); });
+    $('#brif-resume-no').addEventListener('click', function(){ localStorage.removeItem(KEY); state={}; stepIdx=0; $('#brif-resume').hidden=true; render(); });
+  } else {
+    render();
+  }
+
+  function render(){
+    if (stepIdx >= STEPS.length) return renderFinal();
+    var step = STEPS[stepIdx];
+    var vals = state[step.id] || {};
+
+    app.innerHTML = '';
+    // прогресс
+    var prog = el('div', {class:'brif__progress'}, []);
+    prog.appendChild(el('span', {}, ['Шаг ' + (stepIdx+1) + ' из ' + STEPS.length + ' · ' + step.title]));
+    var pct = Math.round((stepIdx / STEPS.length) * 100);
+    prog.appendChild(el('span', {}, [pct + '%']));
+    app.appendChild(prog);
+    var bar = el('div', {class:'brif__bar'}, [ el('div', {class:'brif__bar-fill', style:'width:' + pct + '%'}, []) ]);
+    app.appendChild(bar);
+
+    // Навигация по шагам — клик по любому переносит туда
+    var chips = el('div', {class:'brif__chips'}, []);
+    STEPS.forEach(function(s, i){
+      var v = state[s.id] || {};
+      var filled = Object.keys(v).some(function(k){ return String(v[k]||'').trim(); });
+      var cls = 'brif__chip' + (i === stepIdx ? ' is-on' : '') + (filled ? ' is-filled' : '');
+      var chip = el('button', {type:'button', class:cls, title:s.title}, [ String(i+1) + '. ' + s.title ]);
+      chip.addEventListener('click', function(){ stepIdx = i; state.__step = i; saveState(state); render(); window.scrollTo({top:0, behavior:'smooth'}); });
+      chips.appendChild(chip);
+    });
+    // + отдельный чип «Итог»
+    var doneChip = el('button', {type:'button', class:'brif__chip brif__chip--final'}, ['✓ Собрать ТЗ']);
+    doneChip.addEventListener('click', function(){ stepIdx = STEPS.length; state.__step = stepIdx; saveState(state); render(); window.scrollTo({top:0, behavior:'smooth'}); });
+    chips.appendChild(doneChip);
+    app.appendChild(chips);
+
+    var wrap = el('div', {class:'brif__step'}, [ el('h2', {}, [step.title]) ]);
+    step.fields.forEach(function(f){
+      var fld = el('div', {class:'brif__field'}, []);
+      fld.appendChild(el('label', {for:'f-'+step.id+'-'+f.n}, [f.label]));
+      var input;
+      if (f.type === 'textarea') {
+        input = el('textarea', {id:'f-'+step.id+'-'+f.n, name:f.n, rows:'4'}, []);
+      } else {
+        input = el('input', {id:'f-'+step.id+'-'+f.n, name:f.n, type:'text'}, []);
+      }
+      input.value = vals[f.n] || '';
+      input.addEventListener('input', function(){
+        state[step.id] = state[step.id] || {};
+        state[step.id][f.n] = input.value;
+        saveState(state);
+      });
+      fld.appendChild(input);
+      if (f.hint) fld.appendChild(el('span', {class:'brif__hint'}, [f.hint || 'Не знаете — пропустите, обсудим на созвоне']));
+      else fld.appendChild(el('span', {class:'brif__hint'}, ['Не знаете — пропустите, обсудим на созвоне']));
+      wrap.appendChild(fld);
+    });
+
+    var nav = el('div', {class:'brif__nav'}, []);
+    var back = el('button', {type:'button', class:'btn btn--ghost'}, ['← Назад']);
+    back.disabled = stepIdx === 0;
+    if (stepIdx === 0) back.style.visibility = 'hidden';
+    back.addEventListener('click', function(){ stepIdx--; state.__step = stepIdx; saveState(state); render(); window.scrollTo({top:0, behavior:'smooth'}); });
+    nav.appendChild(back);
+
+    var nextTxt = stepIdx === STEPS.length - 1 ? 'Собрать ТЗ →' : 'Далее →';
+    var next = el('button', {type:'button', class:'btn btn--accent'}, [nextTxt]);
+    next.addEventListener('click', function(){
+      stepIdx++; state.__step = stepIdx; saveState(state); render(); window.scrollTo({top:0, behavior:'smooth'});
+    });
+    nav.appendChild(next);
+    wrap.appendChild(nav);
+    app.appendChild(wrap);
+  }
+
+  function buildTZ(){
+    var lines = ['ТЗ на разработку сайта', 'Заполнено: ' + new Date().toLocaleDateString('ru-RU')];
+    if (state.__calc && state.__calc.price) {
+      lines.push('Расчёт из калькулятора: ' + state.__calc.price + ', срок ' + (state.__calc.days || '?') + ' дн.');
+    }
+    lines.push('');
+    STEPS.forEach(function(step){
+      var vals = state[step.id] || {};
+      var block = [];
+      step.fields.forEach(function(f){
+        var v = String(vals[f.n] || '').trim();
+        if (v) block.push('  ' + f.label + ': ' + v);
+      });
+      if (block.length) {
+        lines.push('## ' + step.title);
+        lines.push.apply(lines, block);
+        lines.push('');
+      }
+    });
+    return lines.join('\n').trim();
+  }
+
+  function filledCount(){
+    var n = 0;
+    STEPS.forEach(function(s){
+      var v = state[s.id] || {};
+      Object.keys(v).forEach(function(k){ if (String(v[k]||'').trim()) n++; });
+    });
+    return n;
+  }
+
+  function renderFinal(){
+    app.innerHTML = '';
+    var wrap = el('div', {class:'brif__final'}, []);
+    wrap.appendChild(el('h2', {}, ['Ваше ТЗ готово']));
+    wrap.appendChild(el('p', {style:'color:var(--muted);margin:6px 0 0'}, ['Проверьте текст — при необходимости вернитесь и дополните.']));
+
+    var comp = state.company || {};
+    var hasName = String(comp.name||'').trim();
+    var hasAbout = String(comp.about||'').trim();
+    if (!hasName || !hasAbout) {
+      wrap.appendChild(el('div', {class:'calc__fork', style:'margin-top:18px'}, [
+        el('p', {style:'margin:0;color:var(--text)'}, ['Заполните хотя бы название компании и чем занимаетесь — иначе ТЗ будет пустое.'])
+      ]));
+      var back = el('button', {type:'button', class:'btn btn--accent', style:'margin-top:14px'}, ['← Вернуться к вопросам']);
+      back.addEventListener('click', function(){ stepIdx = 0; state.__step = 0; saveState(state); render(); });
+      wrap.appendChild(back);
+      app.appendChild(wrap);
+      return;
+    }
+
+    var tz = buildTZ();
+    wrap.appendChild(el('div', {class:'brif__preview'}, [tz]));
+
+    var actions = el('div', {class:'brif__actions'}, []);
+
+    // Скопировать
+    var copyBtn = el('button', {type:'button', class:'btn btn--ghost'}, ['Скопировать текст']);
+    copyBtn.addEventListener('click', function(){
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(tz).then(function(){ copyBtn.textContent = '✓ Скопировано'; setTimeout(function(){ copyBtn.textContent = 'Скопировать текст'; }, 2200); });
+      }
+    });
+    actions.appendChild(copyBtn);
+
+    // Telegram
+    var tgBtn = el('a', {href:'https://t.me/'+TG_USER, target:'_blank', rel:'noopener', class:'btn btn--accent'}, ['Отправить в Telegram']);
+    tgBtn.addEventListener('click', function(){
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(tz).then(function(){
+          toastBrif('Текст скопирован — вставьте его в чат');
+        });
+      }
+    });
+    actions.appendChild(tgBtn);
+
+    // WhatsApp
+    if (WA_NUMBER) {
+      var waText = tz;
+      var URL_LIMIT = 1800; // с запасом
+      var truncated = false;
+      if (encodeURIComponent(waText).length > URL_LIMIT) {
+        while (encodeURIComponent(waText).length > URL_LIMIT - 40) waText = waText.slice(0, -40);
+        waText += '\n\n(полная версия в файле)';
+        truncated = true;
+      }
+      var waBtn = el('a', {href:'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(waText), target:'_blank', rel:'noopener', class:'btn btn--ghost'}, ['Отправить в WhatsApp']);
+      actions.appendChild(waBtn);
+    }
+
+    // Скачать
+    var dlBtn = el('button', {type:'button', class:'btn btn--ghost'}, ['Скачать файлом (.txt)']);
+    dlBtn.addEventListener('click', function(){
+      var blob = new Blob([tz], {type:'text/plain;charset=utf-8'});
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url; a.download = 'tz-intero-' + new Date().toISOString().slice(0,10) + '.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+    });
+    actions.appendChild(dlBtn);
+
+    wrap.appendChild(actions);
+
+    var restart = el('button', {type:'button', class:'btn btn--ghost', style:'margin-top:18px;font-size:13px;padding:8px 14px'}, ['Начать заново']);
+    restart.addEventListener('click', function(){
+      if (confirm('Удалить ответы и начать бриф заново?')) {
+        localStorage.removeItem(KEY); state = {}; stepIdx = 0; render();
+      }
+    });
+    wrap.appendChild(restart);
+
+    var back = el('button', {type:'button', class:'btn btn--ghost', style:'margin-top:10px;margin-left:8px;font-size:13px;padding:8px 14px'}, ['← Вернуться к вопросам']);
+    back.addEventListener('click', function(){ stepIdx = STEPS.length - 1; state.__step = stepIdx; saveState(state); render(); });
+    wrap.appendChild(back);
+
+    app.appendChild(wrap);
+  }
+
+  function toastBrif(msg){
+    var t = document.createElement('div');
+    t.textContent = msg;
+    t.style.cssText = 'position:fixed;left:50%;bottom:26px;transform:translate(-50%,14px);background:#14171e;border:1px solid #242935;color:#f2f4f8;padding:13px 20px;border-radius:13px;font-weight:600;z-index:90;opacity:0;transition:.3s;max-width:90vw;text-align:center';
+    document.body.appendChild(t);
+    requestAnimationFrame(function(){ t.style.opacity=1; t.style.transform='translate(-50%,0)'; });
+    setTimeout(function(){ t.style.opacity=0; setTimeout(function(){ t.remove(); }, 350); }, 3600);
+  }
+})();
+</script>
+</body>
+</html>
