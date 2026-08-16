@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Услуги и цены — юридическая помощь</title>
+<meta name="description" content="Услуги адвоката для физических лиц с ценами и калькулятором оценки дела." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Услуги и цены — Ваш адвокат" />
+<meta property="og:description" content="Юридические услуги для физических лиц с калькулятором оценки дела." />
+<meta property="og:image" content="https://vash-advokat.netlify.app/og.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" data-bind="logoInitial">Ю</span>
+      <span class="nav__logo-text"><span data-bind="shortName">Фамилия</span><em data-bind="logoTagline">юридическая практика</em></span>
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html">Главная</a>
+      <a href="uslugi.html" class="is-active">Услуги</a>
+      <a href="o-yuriste.html">О юристе</a>
+      <a href="keysy.html">Кейсы</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a>
+      <a href="kontakty.html" class="btn btn--outline nav__cta">Консультация</a>
+      <div class="nav__social">
+        <a href="#" data-social="telegram" class="soc-ic soc-ic--tg" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+        <a href="#" data-social="whatsapp" class="soc-ic soc-ic--wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="o-yuriste.html">О юристе</a><a href="keysy.html">Кейсы</a><a href="kontakty.html">Контакты</a>
+</div>
+
+<section class="section page-hero">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Услуги и цены</div>
+      <h2 class="section__title">Направления практики</h2>
+      <p class="section__sub">Работаю с физическими лицами. Веду дело от первичной консультации до исполнения решения суда. Цены — шаблонные, впишите свои.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="services__grid">
+      <article class="svc"><div class="svc__num">01</div><h3>Семейные споры</h3><p>Развод, раздел имущества, определение места жительства детей, взыскание алиментов.</p><div class="svc__price">от 0 000 ₽</div></article>
+      <article class="svc"><div class="svc__num">02</div><h3>Жилищное право</h3><p>Сделки с недвижимостью, споры с соседями, выселение, приватизация, признание права собственности.</p><div class="svc__price">от 0 000 ₽</div></article>
+      <article class="svc"><div class="svc__num">03</div><h3>Наследство</h3><p>Оформление наследства, споры, восстановление сроков, оспаривание завещания.</p><div class="svc__price">от 0 000 ₽</div></article>
+      <article class="svc"><div class="svc__num">04</div><h3>Договорные споры</h3><p>Взыскание долгов, расторжение договоров, возврат средств, защита прав потребителей.</p><div class="svc__price">от 0 000 ₽</div></article>
+      <article class="svc"><div class="svc__num">05</div><h3>Трудовые споры</h3><p>Незаконное увольнение, невыплата зарплаты, восстановление на работе, компенсации.</p><div class="svc__price">от 0 000 ₽</div></article>
+      <article class="svc"><div class="svc__num">06</div><h3>Штрафы и КоАП</h3><p>Обжалование постановлений о штрафах, налоговые уведомления, административные дела.</p><div class="svc__price">от 0 000 ₽</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section calc" id="calc">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Калькулятор</div>
+      <h2 class="section__title">Оцените своё дело за минуту</h2>
+      <p class="section__sub">Все цифры — ориентировочные, точная оценка даётся на консультации.</p>
+    </div>
+    <div class="calc__tabs" role="tablist">
+      <button class="calc__tab is-active" data-tab="fine">Риск штрафа</button>
+      <button class="calc__tab" data-tab="save">Экономия на налогах</button>
+      <button class="calc__tab" data-tab="cost">Стоимость услуг</button>
+    </div>
+    <div class="calc__panels">
+      <div class="calc__panel is-active" data-panel="fine">
+        <div class="calc__grid">
+          <div class="calc__form">
+            <label>Тип нарушения
+              <select id="fine-type">
+                <option value="tax">Неуплата налога / декларация</option>
+                <option value="admin">Административное (ПДД, тишина и т.п.)</option>
+                <option value="labor">Нарушение трудового договора</option>
+                <option value="housing">Жилищное (перепланировка, ЖКХ)</option>
+              </select>
+            </label>
+            <label>Сумма / база (₽)<input type="number" id="fine-sum" value="150000" min="0" step="1000" /></label>
+            <label>Просрочка (дней)<input type="range" id="fine-days" min="0" max="365" value="60" /><span class="range-val"><span id="fine-days-v">60</span> дней</span></label>
+          </div>
+          <div class="calc__result">
+            <div class="calc__result-label">Возможный штраф</div>
+            <div class="calc__result-value"><span id="fine-value">0</span> ₽</div>
+            <div class="calc__result-hint">С юристом сумма, как правило, снижается на 40–70%.</div>
+            <a href="kontakty.html" class="btn btn--primary btn--sm">Снизить штраф →</a>
+          </div>
+        </div>
+      </div>
+      <div class="calc__panel" data-panel="save">
+        <div class="calc__grid">
+          <div class="calc__form">
+            <label>Годовой доход (₽)<input type="number" id="save-income" value="1200000" min="0" step="10000" /></label>
+            <label>Ситуация
+              <select id="save-case">
+                <option value="ipn">ИП — переход на нужный режим</option>
+                <option value="deduct">Возврат имущественного вычета</option>
+                <option value="health">Социальный вычет (лечение, обучение)</option>
+                <option value="invest">Инвестиционный вычет (ИИС)</option>
+              </select>
+            </label>
+            <label>Кол-во членов семьи<input type="range" id="save-family" min="1" max="6" value="2" /><span class="range-val"><span id="save-family-v">2</span> чел.</span></label>
+          </div>
+          <div class="calc__result">
+            <div class="calc__result-label">Экономия за год</div>
+            <div class="calc__result-value"><span id="save-value">0</span> ₽</div>
+            <div class="calc__result-hint">Оценка на основе типовых кейсов практики.</div>
+            <a href="kontakty.html" class="btn btn--primary btn--sm">Получить точный расчёт →</a>
+          </div>
+        </div>
+      </div>
+      <div class="calc__panel" data-panel="cost">
+        <div class="calc__grid">
+          <div class="calc__form">
+            <label>Услуга
+              <select id="cost-svc">
+                <option value="consult">Устная консультация</option>
+                <option value="doc">Составление документа</option>
+                <option value="claim">Досудебная претензия</option>
+                <option value="court">Ведение дела в суде</option>
+                <option value="full">«Под ключ»: от претензии до исполнения</option>
+              </select>
+            </label>
+            <label>Сложность
+              <select id="cost-lvl">
+                <option value="1">Стандартная</option>
+                <option value="1.5">Повышенная</option>
+                <option value="2.2">Высокая, несколько инстанций</option>
+              </select>
+            </label>
+            <label>Срочность<input type="range" id="cost-urg" min="0" max="100" value="0" /><span class="range-val">наценка +<span id="cost-urg-v">0</span>%</span></label>
+          </div>
+          <div class="calc__result">
+            <div class="calc__result-label">Ориентировочная стоимость</div>
+            <div class="calc__result-value"><span id="cost-value">0</span> ₽</div>
+            <div class="calc__result-hint">Точная сумма фиксируется в договоре после консультации.</div>
+            <a href="kontakty.html" class="btn btn--primary btn--sm">Обсудить условия →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div data-bind="footerCopy">© 2026 Адвокатский кабинет</div>
+    <div data-bind="footerReg">Реестровый номер · Адвокатская палата</div>
+    <div><a href="politika.html">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<a href="tel:+70000000000" class="write-fab" data-tel aria-label="Напишите нам">
+  <span class="write-fab__label">Напишите</span>
+  <span class="write-fab__circle">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+  </span>
+</a>
+
+<div class="mobile-cta">
+  <a href="tel:+70000000000" class="mc-call" data-tel><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>Позвонить</a>
+  <a href="#" class="mc-wa" data-social="whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>WhatsApp</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

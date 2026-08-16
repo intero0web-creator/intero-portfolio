@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>О юристе — опыт и принципы работы</title>
+<meta name="description" content="О частнопрактикующем адвокате: опыт, принципы, этапы работы и отзывы клиентов." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="О юристе — Ваш адвокат" />
+<meta property="og:description" content="Опыт, принципы работы и отзывы клиентов частнопрактикующего адвоката." />
+<meta property="og:image" content="https://vash-advokat.netlify.app/og.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-mark" data-bind="logoInitial">Ю</span>
+      <span class="nav__logo-text"><span data-bind="shortName">Фамилия</span><em data-bind="logoTagline">юридическая практика</em></span>
+    </a>
+    <nav class="nav__menu">
+      <a href="index.html">Главная</a>
+      <a href="uslugi.html">Услуги</a>
+      <a href="o-yuriste.html" class="is-active">О юристе</a>
+      <a href="keysy.html">Кейсы</a>
+      <a href="kontakty.html">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+70000000000" class="nav__phone" data-bind="phoneDisplay" data-tel>+7 (000) 000-00-00</a>
+      <a href="kontakty.html" class="btn btn--outline nav__cta">Консультация</a>
+      <div class="nav__social">
+        <a href="#" data-social="telegram" class="soc-ic soc-ic--tg" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.1 14.7c-.2 1-.9 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.8 13 3.3 11.6c-1-.3-1-1 .2-1.5L20.6 3.4c.8-.3 1.5.2 1.3 1z"/></svg></a>
+        <a href="#" data-social="whatsapp" class="soc-ic soc-ic--wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="o-yuriste.html">О юристе</a><a href="keysy.html">Кейсы</a><a href="kontakty.html">Контакты</a>
+</div>
+
+<section class="section about" style="padding-top:70px">
+  <div class="container about__inner">
+    <div class="about__photo">
+      <div class="about__portrait" data-photo aria-hidden="true">
+        <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2740"/><stop offset="1" stop-color="#0d1626"/></linearGradient></defs>
+          <rect width="200" height="240" fill="url(#pg)"/>
+          <circle cx="100" cy="88" r="42" fill="#26324d"/>
+          <path d="M30 240 C30 170 70 150 100 150 C130 150 170 170 170 240 Z" fill="#26324d"/>
+        </svg>
+        <span class="about__photo-note">фото юриста</span>
+      </div>
+      <div class="about__badge-reg">
+        <b data-bind="regNumber">№ 00/00000</b>
+        <span>в реестре адвокатов<br/><span data-bind="regCity">вашего региона</span></span>
+      </div>
+    </div>
+    <div class="about__text">
+      <div class="eyebrow">О юристе</div>
+      <h2 class="section__title" data-bind="name">Имя Фамилия</h2>
+      <p class="about__role" data-bind="role">Адвокат · частная практика</p>
+      <p class="about__lead">
+        Веду дела только физических лиц — каждым занимаюсь лично, без передачи «помощникам».
+        Специализация: семейные, жилищные, наследственные и договорные споры. Довожу дело
+        до реального результата, а не до решения суда «на бумаге».
+      </p>
+      <ul class="about__creds">
+        <li><b>Профильный вуз</b><span>высшее юридическое образование</span></li>
+        <li><b>Адвокатская палата</b><span>действующий статус адвоката</span></li>
+        <li><b>Многолетний опыт</b><span>частная практика и ведение дел</span></li>
+        <li><b>Адвокатская тайна</b><span>всё, что вы расскажете, защищено законом</span></li>
+      </ul>
+      <a href="kontakty.html" class="btn btn--primary">Получить бесплатную консультацию</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight steps" id="steps">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Как работаем</div>
+      <h2 class="section__title">Четыре шага от заявки до результата</h2>
+    </div>
+    <ol class="steps__list">
+      <li><div class="steps__num">01</div><h3>Заявка и бесплатная консультация</h3><p>Вы описываете ситуацию — я оцениваю перспективы и говорю честно, стоит ли идти в суд.</p></li>
+      <li><div class="steps__num">02</div><h3>Договор с фиксированной ценой</h3><p>Прописываем объём работ, сроки и стоимость. Никаких скрытых платежей.</p></li>
+      <li><div class="steps__num">03</div><h3>Ведение дела</h3><p>Собираю доказательства, готовлю документы, представляю ваши интересы во всех инстанциях.</p></li>
+      <li><div class="steps__num">04</div><h3>Исполнение решения</h3><p>Работаю с приставами, контролирую взыскание — пока вы не получите результат.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Отзывы</div>
+      <h2 class="section__title">Что говорят клиенты</h2>
+    </div>
+    <div class="reviews__grid">
+      <blockquote class="review"><p>«Помог отсудить долю в квартире после смерти отца. Дело шло полтора года, но велось чётко — я получала отчёт после каждого заседания.»</p><footer><strong>Марина К.</strong><span>наследственный спор</span></footer></blockquote>
+      <blockquote class="review"><p>«Развод с разделом бизнеса — казалось, всё безнадёжно. В итоге сохранила свою долю и получила алименты в разумном размере.»</p><footer><strong>Ольга П.</strong><span>семейное право</span></footer></blockquote>
+      <blockquote class="review"><p>«Взыскали с застройщика неустойку и моральный вред. Работа профессиональная, цену не поднимали.»</p><footer><strong>Дмитрий А.</strong><span>защита потребителей</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div data-bind="footerCopy">© 2026 Адвокатский кабинет</div>
+    <div data-bind="footerReg">Реестровый номер · Адвокатская палата</div>
+    <div><a href="politika.html">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<a href="tel:+70000000000" class="write-fab" data-tel aria-label="Напишите нам">
+  <span class="write-fab__label">Напишите</span>
+  <span class="write-fab__circle">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+  </span>
+</a>
+
+<div class="mobile-cta">
+  <a href="tel:+70000000000" class="mc-call" data-tel><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>Позвонить</a>
+  <a href="#" class="mc-wa" data-social="whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>WhatsApp</a>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
