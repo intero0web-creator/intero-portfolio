@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bladeG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D8DCE0"/>
+      <stop offset="50%" stop-color="#8A9098"/>
+      <stop offset="100%" stop-color="#3A4048"/>
+    </linearGradient>
+    <linearGradient id="handleG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A2810"/>
+      <stop offset="50%" stop-color="#8A4820"/>
+      <stop offset="100%" stop-color="#3A1C08"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="30%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="rgba(232,90,24,0.28)"/>
+      <stop offset="100%" stop-color="rgba(232,90,24,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="#161A1F"/>
+  <rect width="1200" height="630" fill="url(#spark)"/>
+
+  <!-- Марка бренда слева-сверху -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="52" height="52" fill="#E85A18" transform="rotate(-4 26 26)"/>
+    <g transform="translate(26,26) rotate(-4)" stroke="#F5F2ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-11 11 L-4 4 L9 -9 L5 -5 L1 -4 L-12 9 Z"/>
+    </g>
+    <text x="72" y="34" font-family="Fraunces, Georgia, serif" font-size="30" font-weight="600" fill="#F5F2ED">Кромка</text>
+  </g>
+
+  <!-- Большой нож -->
+  <g transform="translate(560, 340) rotate(-6)">
+    <!-- Лезвие -->
+    <path d="M -260 -30 Q -180 -60 60 -50 L 200 -35 L 198 25 L 60 40 Q -140 46 -260 20 Z" fill="url(#bladeG)" stroke="#22272E" stroke-width="2"/>
+    <path d="M -230 -18 Q -100 -28 180 -20" stroke="#F0F2F5" stroke-width="1.5" fill="none" opacity="0.75"/>
+    <path d="M -230 15 Q -100 22 180 18" stroke="#5A6068" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <!-- Рукоять -->
+    <path d="M 200 -35 L 380 -30 L 386 -15 L 386 20 L 380 30 L 200 25 Z" fill="url(#handleG)" stroke="#1A0E05" stroke-width="2"/>
+    <circle cx="240" cy="-5" r="6" fill="#B0B4B8" stroke="#22272E" stroke-width="1.2"/>
+    <circle cx="290" cy="-5" r="6" fill="#B0B4B8" stroke="#22272E" stroke-width="1.2"/>
+    <circle cx="340" cy="-5" r="6" fill="#B0B4B8" stroke="#22272E" stroke-width="1.2"/>
+    <!-- Искры -->
+    <g stroke="#E85A18" stroke-width="2.5" stroke-linecap="round">
+      <line x1="-200" y1="60" x2="-210" y2="95"/>
+      <line x1="-160" y1="62" x2="-155" y2="98"/>
+      <line x1="-120" y1="62" x2="-130" y2="100"/>
+      <line x1="-80" y1="62" x2="-70" y2="98"/>
+      <line x1="-40" y1="60" x2="-45" y2="94"/>
+    </g>
+    <g fill="#F58038">
+      <circle cx="-210" cy="102" r="3.5"/>
+      <circle cx="-155" cy="106" r="3"/>
+      <circle cx="-130" cy="107" r="3.5"/>
+      <circle cx="-70" cy="104" r="2.8"/>
+      <circle cx="-45" cy="100" r="3"/>
+      <circle cx="-180" cy="118" r="2.2"/>
+      <circle cx="-100" cy="118" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- Основной текст -->
+  <text x="80" y="440" font-family="Fraunces, Georgia, serif" font-size="86" font-weight="600" fill="#F5F2ED">Заточка ножей</text>
+  <text x="80" y="510" font-family="Fraunces, Georgia, serif" font-size="52" font-weight="500" font-style="italic" fill="#F58038">на японских водных камнях</text>
+
+  <!-- Хвостик -->
+  <g transform="translate(80, 555)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#E85A18" stroke-width="3"/>
+    <text x="80" y="6" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#A8AEB4" letter-spacing="3">САНКТ-ПЕТЕРБУРГ · КУПЧИНО · KROMKA-SPB.RU</text>
+  </g>
+</svg>

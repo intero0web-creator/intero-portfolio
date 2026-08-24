@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Кромка — заточка ножей на японских водных камнях, СПб (Купчино)</title>
+<meta name="description" content="Ручная заточка ножей на японских водных камнях в Санкт-Петербурге. Артём Севрюков, 6 лет только этим и занимается. 20 ножей в неделю максимум — иначе падает качество."/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Кромка"/>
+<meta property="og:title" content="Кромка — заточка ножей вручную, СПб"/>
+<meta property="og:description" content="Только руки и японские водные камни. 20 ножей в неделю. Не берём в работу штампованный мусор."/>
+<meta property="og:url" content="https://kromka-spb.ru/"/>
+<meta property="og:image" content="https://kromka-spb.ru/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="ru_RU"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Кромка — заточка ножей вручную, СПб"/>
+<meta name="twitter:description" content="Только руки и японские водные камни. 20 ножей в неделю."/>
+<meta name="twitter:image" content="https://kromka-spb.ru/og-image.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ==== ФИКСИРОВАННОЕ МЕНЮ ==== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-4L20 4l-1 4-4 1L4 20z"/><path d="M14 6l4 4"/></svg>
+      </span>
+      <span class="brand-name">Кромка</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#how" data-nav>Как работаю</a>
+      <a href="#prices" data-nav>Цены</a>
+      <a href="#flow" data-nav>Как отдать</a>
+      <a href="#reviews" data-nav>Отзывы</a>
+      <a href="#contact" class="nav-cta">Записать нож <span>→</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==== HERO ==== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="brushed-steel"></div>
+    <div class="light-sweep"></div>
+    <!-- Контейнер для частиц (искры + пылинки), заполняется JS -->
+    <div class="hero-particles" id="heroParticles"></div>
+  </div>
+
+  <div class="container hero-grid-container">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Санкт-Петербург · Купчино · с 2018 года</div>
+      <h1>
+        <span class="hero-line">Заточка ножей</span>
+        <span class="hero-line hero-line-em">вручную,</span>
+        <span class="hero-line">на японских камнях</span>
+      </h1>
+      <p class="hero-lead">Артём. Точу ножи шесть лет — только этим, полный день. Никакого электростанка: он греет металл и жуёт кромку. Один нож — 40–90 минут работы, потом проверяю на бумаге и на помидоре.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Записать нож в работу <span aria-hidden="true">→</span></a>
+        <a href="#prices" class="btn btn-ghost">Посмотреть цены</a>
+      </div>
+    </div>
+
+    <!-- ИНТЕРАКТИВНАЯ СЦЕНА С НОЖОМ -->
+    <div class="knife-scene" id="knifeScene">
+      <div class="knife-wrap" id="knifeWrap">
+        <svg class="knife-svg" viewBox="0 0 400 300" width="420" height="320" aria-hidden="true">
+          <defs>
+            <!-- Сталь клинка: холодный градиент верх→низ + лёгкая голубизна закалки -->
+            <linearGradient id="bladeMain" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%"  stop-color="#EEF1F3"/>
+              <stop offset="16%" stop-color="#C7CDD3"/>
+              <stop offset="42%" stop-color="#98A0A8"/>
+              <stop offset="58%" stop-color="#6E767E"/>
+              <stop offset="82%" stop-color="#454C54"/>
+              <stop offset="100%" stop-color="#262B31"/>
+            </linearGradient>
+            <!-- Продольный блик вдоль полотна -->
+            <linearGradient id="bladeShine" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+              <stop offset="45%" stop-color="rgba(255,255,255,0.62)"/>
+              <stop offset="55%" stop-color="rgba(255,255,255,0.62)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+            <!-- Больстер: полированный никель-серебро -->
+            <linearGradient id="bolsterMain" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#DADFE3"/>
+              <stop offset="45%" stop-color="#8D949B"/>
+              <stop offset="100%" stop-color="#3E444A"/>
+            </linearGradient>
+            <!-- Рукоять: палисандр -->
+            <linearGradient id="handleMain" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%"  stop-color="#7A4A26"/>
+              <stop offset="20%" stop-color="#5C3418"/>
+              <stop offset="55%" stop-color="#42230F"/>
+              <stop offset="100%" stop-color="#26130A"/>
+            </linearGradient>
+            <radialGradient id="rivetMain" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#F0F2F4"/>
+              <stop offset="45%" stop-color="#AEB4BA"/>
+              <stop offset="100%" stop-color="#4A5058"/>
+            </radialGradient>
+            <clipPath id="bladeClip">
+              <path d="M258,108 Q150,90 40,150 Q132,193 258,169 Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- ═══ ЛЕЗВИЕ ═══ -->
+          <path d="M258,108 Q150,90 40,150 Q132,193 258,169 Z" fill="url(#bladeMain)" stroke="#1B1F24" stroke-width="1.6"/>
+
+          <!-- Линия спуска (граница режущей фаски) — придаёт объём заточенной кромки -->
+          <path d="M248,146 Q145,160 52,150" fill="none" stroke="#2A2F35" stroke-width="1" opacity="0.55"/>
+          <path d="M248,146 Q145,158 52,150" fill="none" stroke="#F0F2F4" stroke-width="0.6" opacity="0.5"/>
+
+          <!-- Кромка — тонкая ясная линия у самого лезвия -->
+          <path d="M254,163 Q145,186 44,150" fill="none" stroke="#F5F7F8" stroke-width="0.9" opacity="0.75"/>
+
+          <!-- Линия обуха (верх клинка) -->
+          <path d="M254,111 Q150,94 42,150" fill="none" stroke="#F0F2F4" stroke-width="0.7" opacity="0.4"/>
+
+          <!-- ПОДВИЖНЫЙ БЛИК (движется вместе с мышью) -->
+          <g clip-path="url(#bladeClip)">
+            <rect id="bladeShineRect" x="0" y="88" width="90" height="106" fill="url(#bladeShine)" style="mix-blend-mode:overlay"/>
+          </g>
+
+          <!-- Вспышка при заточке -->
+          <g clip-path="url(#bladeClip)" class="blade-flash">
+            <rect x="0" y="86" width="300" height="110" fill="#fff"/>
+          </g>
+
+          <!-- ═══ БОЛЬСТЕР ═══ -->
+          <path d="M254,104 L276,101 Q283,135 276,172 L254,169 Z" fill="url(#bolsterMain)" stroke="#20242A" stroke-width="1.2"/>
+          <line x1="266" y1="106" x2="266" y2="167" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+          <!-- ═══ РУКОЯТЬ ═══ -->
+          <path d="M276,101 L362,107 Q386,110 386,139 Q386,169 362,172 L276,172 Z" fill="url(#handleMain)" stroke="#160B04" stroke-width="1.6"/>
+          <!-- Волокна дерева -->
+          <path d="M284,113 Q330,118 372,124" fill="none" stroke="#2C1608" stroke-width="0.8" opacity="0.4"/>
+          <path d="M282,131 Q334,135 378,139" fill="none" stroke="#8A5A30" stroke-width="0.8" opacity="0.35"/>
+          <path d="M284,160 Q330,156 374,151" fill="none" stroke="#2C1608" stroke-width="0.8" opacity="0.4"/>
+          <!-- Блик сверху рукояти -->
+          <path d="M280,107 Q330,110 366,114" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.4"/>
+
+          <!-- Заклёпки -->
+          <circle cx="302" cy="123" r="5.5" fill="url(#rivetMain)" stroke="#20242A" stroke-width="1"/>
+          <circle cx="302" cy="123" r="1.5" fill="rgba(255,255,255,0.65)"/>
+          <circle cx="338" cy="139" r="5.5" fill="url(#rivetMain)" stroke="#20242A" stroke-width="1"/>
+          <circle cx="338" cy="139" r="1.5" fill="rgba(255,255,255,0.65)"/>
+          <circle cx="302" cy="155" r="5.5" fill="url(#rivetMain)" stroke="#20242A" stroke-width="1"/>
+          <circle cx="302" cy="155" r="1.5" fill="rgba(255,255,255,0.65)"/>
+
+          <!-- Точильный камень — вылетает к точке клика (позиция и путь задаются JS) -->
+          <g id="whetstone" style="opacity:0">
+            <!-- лёгкий шлейф движения -->
+            <g id="whetstoneTrail" opacity="0.5">
+              <line x1="-70" y1="-2" x2="-46" y2="-2" stroke="var(--spark-2)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="-62" y1="6" x2="-46" y2="6" stroke="var(--spark-2)" stroke-width="1.4" stroke-linecap="round"/>
+              <line x1="-62" y1="-9" x2="-46" y2="-9" stroke="var(--spark-2)" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+            <rect x="-45" y="-14" width="90" height="28" rx="3" fill="#585F68" stroke="#1A1D22" stroke-width="1.5"/>
+            <path d="M-45,-14 L45,-14 L45,-3 L-45,-3 Z" fill="#7A828C" opacity="0.8"/>
+            <rect x="-41" y="-10" width="82" height="3.5" fill="#8A929A" opacity="0.55"/>
+            <rect x="-41" y="4" width="82" height="4" fill="#2A3038" opacity="0.65"/>
+            <rect x="-45" y="10" width="90" height="4" rx="1.5" fill="#C7A45C" opacity="0.85"/>
+          </g>
+        </svg>
+
+        <!-- Слой для динамически создаваемых искр -->
+        <div class="spark-layer" id="sparkLayer"></div>
+      </div>
+
+      <!-- Тени под ножом -->
+      <div class="knife-shadow"></div>
+    </div>
+  </div>
+
+  <!-- Мета внизу хиро -->
+  <div class="container">
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="num">6<small>лет</small></div>
+        <div class="lbl">точу полный день — до этого 12 лет был шефом</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="num">20<small>/нед</small></div>
+        <div class="lbl">максимум ножей в неделю. Больше — падает качество</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="num">400<span class="dash">–</span>6000</div>
+        <div class="lbl">grit японских водных камней. От грубой до полировальной</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#how" class="hero-scroll" aria-label="Листать вниз">
+    <span>листать</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"/><polyline points="6 14 12 20 18 14"/></svg>
+  </a>
+</section>
+
+<!-- ==== FACTS ==== -->
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Как это устроено</div>
+      <h2>Что нужно знать заранее</h2>
+      <p>Четыре штуки, из-за которых я работаю именно так, а не иначе.</p>
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-n">01</div>
+        <h3>Только руки и камни</h3>
+        <p>Никакого электрического станка. Он даёт скорость, но перегревает металл — кромка «отпускается», нож становится мягче и тупится втрое быстрее. У меня <strong>шесть японских водных камней</strong> — от 400 grit (сильно убитая кромка) до 6000 (полировка перед бритвой).</p>
+      </div>
+
+      <div class="fact">
+        <div class="fact-n">02</div>
+        <h3>20 ножей в неделю, не больше</h3>
+        <p>Один нож — <strong>40–90 минут ручной работы</strong>, смотря что с ним делали. Больше двадцати за неделю физически не тяну — устают запястья, падает контроль угла. Поэтому лист ожидания — обычно 5–8 дней. Срочно на завтра не получится.</p>
+      </div>
+
+      <div class="fact">
+        <div class="fact-n">03</div>
+        <h3>Не беру то, что не имеет смысла</h3>
+        <p>Если нож — <strong>штамповка из мягкой стали за 300–500 рублей</strong>, скажу честно: моя заточка продержится месяц, а хороший нож — год. Проще один раз потратиться на приличный клинок. Пришлите фото — сразу отвечу, есть ли смысл.</p>
+      </div>
+
+      <div class="fact">
+        <div class="fact-n">04</div>
+        <h3>Тест на A4 и на помидоре</h3>
+        <p>Каждый готовый нож проверяю сначала <strong>на срезе листа бумаги</strong> (должен резать без рывков), потом <strong>на кожуре спелого помидора</strong> (должен входить под своим весом). Не проходит хоть где-то — возвращаюсь на камень.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PRICES + NOT ==== -->
+<section id="prices" class="section-paper">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Цены</div>
+      <h2>Прайс — прямо и без звёздочек</h2>
+      <p>Точная цена — после того, как посмотрю фото ножа. Ниже — вилки, в которых почти всегда всё умещается.</p>
+    </div>
+
+    <div class="two">
+      <div>
+        <dl class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Кухонный европейский, 15–25 см</div>
+              <span class="price-row-hint">Wüsthof, Zwilling, Victorinox, Tramontina и подобные</span>
+            </div>
+            <div class="price-row-val">700 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Японский шеф / гьюто / сантоку, 18–24 см</div>
+              <span class="price-row-hint">Твёрдая сталь, тонкие геометрии — дольше работать, аккуратнее</span>
+            </div>
+            <div class="price-row-val">900 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Хлебный (с волной)</div>
+              <span class="price-row-hint">Если волна ещё цела — обновляю. Полностью «съеденные» — не восстановить</span>
+            </div>
+            <div class="price-row-val">900 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Обвалочный, филейный, малый</div>
+              <span class="price-row-hint">Клинок до 15 см</span>
+            </div>
+            <div class="price-row-val">600 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Ножницы кулинарные</div>
+              <span class="price-row-hint">Разъёмные — от 500 ₽, цельные — 450 ₽</span>
+            </div>
+            <div class="price-row-val">450 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Топорик, мачете</div>
+              <span class="price-row-hint">Смотря по толщине обуха и состоянию</span>
+            </div>
+            <div class="price-row-val">от 1 200 ₽</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-row-name">Столярный, охотничий, коллекционный</div>
+              <span class="price-row-hint">Пишите — обсудим отдельно, часто выхожу за прайс</span>
+            </div>
+            <div class="price-row-val">по фото</div>
+          </div>
+        </dl>
+        <div class="price-note">
+          Оплата — при выдаче, наличные или перевод по СБП. Предоплату не беру. Если после работы что-то не так с заточкой (маловероятно, но бывает) — беру на переделку без вопросов.
+        </div>
+      </div>
+
+      <aside class="not-take">
+        <h3>Что не беру в работу</h3>
+        <p class="not-take-lead">Честнее сказать сразу, чем взять деньги за то, что не смогу сделать хорошо.</p>
+        <ul>
+          <li>Керамические лезвия — их берёт только алмаз, у меня нет</li>
+          <li>Микрозубчатая заточка (кроме серьёзных хлебных)</li>
+          <li>Клинки со сколами глубже 2 мм — уходит слишком много металла</li>
+          <li>Дешёвая штамповка — предупрежу заранее по фото</li>
+          <li>Не отчищаю ржавчину — только заточка</li>
+          <li>Не переделываю форму лезвия и не перетачиваю с одностороннего на двусторонний</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==== FLOW ==== -->
+<section id="flow" class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Как отдать нож</div>
+      <h2>Четыре шага, всё понятно</h2>
+      <p>Ничего онлайн-регистраций и приложений. Заполняете форму — и дальше по делу.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <h4>Оставляете заявку</h4>
+        <p><a href="#contact" style="color:var(--spark-2);border-bottom:1px dotted var(--spark-2)">Через форму ниже</a> — с фото ножа сбоку и крупно кромки. По фото сразу отвечу: цену и когда возьму.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <h4>Согласовываем</h4>
+        <p>Обычно лист ожидания на 5–8 дней. Если срочно — предупрежу, что не смогу. Отвечаю с 9 до 20.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <h4>Привозите или шлёте</h4>
+        <p>Купчино, самовывоз — адрес после согласования. Или СДЭК до пункта: приму, отпишу, что дошло. Из другого города — норма.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <h4>Забираете через 2–4 дня</h4>
+        <p>Каждый нож заворачиваю в промасленную бумагу — не поржавеет в дороге. Оплата при выдаче, СБП или наличные.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== REVIEWS ==== -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Что говорят</div>
+      <h2>Отзывы клиентов</h2>
+      <p>Тех, кто разрешил поставить сюда — из чатов и с яндекс-карт.</p>
+    </div>
+
+    <div class="reviews">
+      <div class="review">
+        <p>Отдал свой рабочий Wüsthof, вернули как новый. Артём отдельно объяснил, почему нельзя резать замороженное — три года резал, а он в первый заход разобрал по полочкам.</p>
+        <div class="review-author">Роман<span>домашний повар, Приморский р-н</span></div>
+      </div>
+      <div class="review">
+        <p>Точит ножи для нашей открытой кухни второй год. Из всех, у кого пробовал — единственный, кто не гонит темп и не делает «по среднему». Просто идеальная кромка каждый раз.</p>
+        <div class="review-author">Кирилл<span>шеф, ресторан «Тайга»</span></div>
+      </div>
+      <div class="review">
+        <p>Дедовский охотничий Trigger 1985 года. Отдал в семи местах — никто не взял, говорят «легче выкинуть». Артём взял, вернул рабочий. Отдельная благодарность за то, что не «выправил» под современный угол.</p>
+        <div class="review-author">Михаил<span>Всеволожск</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== CONTACT ==== -->
+<section id="contact" class="section-paper">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Записать нож</div>
+      <h2>Заявка на заточку</h2>
+      <p>Заполните форму — свяжусь в течение дня, обычно в первой половине. Или позвоните напрямую.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <aside class="contact-side">
+        <h3>Проще всего — форма</h3>
+        <p>Я работаю один и не всегда отвечаю на звонок сразу. Заявка через форму приходит мгновенно, отвечаю в первую очередь.</p>
+
+        <div class="contact-line">
+          <div class="k">Телефон</div>
+          <div class="v"><a data-cfg="phone" data-cfg-href="tel">+7 (911) 234-56-78</a></div>
+        </div>
+        <div class="contact-line" data-cfg-optional>
+          <div class="k">Telegram</div>
+          <div class="v"><a data-cfg="telegram" data-cfg-href="tg" target="_blank" rel="noopener">@handle</a></div>
+        </div>
+        <div class="contact-line">
+          <div class="k">Почта</div>
+          <div class="v"><a data-cfg="email" data-cfg-href="mailto">hi@kromka-spb.ru</a></div>
+        </div>
+        <div class="contact-line">
+          <div class="k">Где я</div>
+          <div class="v" data-cfg="address">СПб, метро Купчино</div>
+        </div>
+        <div class="contact-line">
+          <div class="k">Когда отвечаю</div>
+          <div class="v">Ежедневно, 9:00–20:00 МСК</div>
+        </div>
+      </aside>
+
+      <form class="form-card" data-form data-source="Заявка на заточку с сайта">
+        <h3>Оставить заявку</h3>
+        <p class="form-intro">Опишите нож и оставьте контакт — свяжусь.</p>
+
+        <div class="demo-badge" data-cfg-demo>
+          <b>Демо-режим.</b> Реальная отправка ещё не настроена — форма работает, но заявка никуда не улетит. Настраивается в <code>config.js</code>.
+        </div>
+
+        <div class="form-field">
+          <label for="k-name">Ваше имя <span class="req">*</span></label>
+          <input type="text" id="k-name" name="Имя" required autocomplete="name" placeholder="Как обращаться"/>
+        </div>
+
+        <div class="form-field">
+          <label for="k-contact">Телефон или Telegram <span class="req">*</span></label>
+          <input type="text" id="k-contact" name="Контакт" required placeholder="+7… или @username"/>
+        </div>
+
+        <div class="form-field">
+          <label for="k-knife">Что за нож <span class="req">*</span></label>
+          <textarea id="k-knife" name="Ножи" required placeholder="Например: два кухонных Wüsthof 20 см и сантоку. Или: дедовский охотничий, есть ржавчина. Если несколько — перечислите."></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="k-photos">Фото ножа сбоку и крупно кромки (можно несколько)</label>
+          <input type="file" id="k-photos" name="Фото" accept="image/*" multiple/>
+          <span class="file-hint" id="k-photos-hint">Не обязательно, но по фото сразу скажу цену и есть ли смысл точить</span>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="Согласие" value="согласен" required/>
+          <span class="consent-text">Согласен(-на) на обработку моих контактных данных и фото для ответа на эту заявку — согласно <a href="privacy.html" target="_blank" rel="noopener">политике конфиденциальности</a>. Ничего не храню на сайте — заявка уходит мне на почту, дальше только между нами.</span>
+        </label>
+
+        <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==== FOOTER ==== -->
+<footer class="foot">
+  <div class="container">
+    <div>
+      <div class="foot-brand" data-cfg="brand">Кромка</div>
+      <p>Заточка ножей вручную на японских водных камнях. СПб, Купчино. Работаю один, беру по 20 ножей в неделю.</p>
+    </div>
+    <div>
+      <h4>По сайту</h4>
+      <ul>
+        <li><a href="#how">Как работаю</a></li>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#flow">Как отдать нож</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contact">Записать нож</a></li>
+        <li><a href="privacy.html">Конфиденциальность</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Связь</h4>
+      <ul>
+        <li data-cfg="phone">+7 (911) 234-56-78</li>
+        <li><a data-cfg="email" data-cfg-href="mailto">hi@kromka-spb.ru</a></li>
+        <li data-cfg-optional>Telegram: <a data-cfg="telegram" data-cfg-href="tg" target="_blank" rel="noopener">@handle</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom container">
+    © 2024 <span data-cfg="brand">Кромка</span> · <span data-cfg="master">Артём Севрюков</span>. Всё делаю сам, руками.
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
