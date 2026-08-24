@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#F5D678" stop-opacity="0.6"/>
+      <stop offset="55%" stop-color="#FBF5E9" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FBF5E9"/>
+    </radialGradient>
+    <linearGradient id="honey" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5D678"/>
+      <stop offset="55%" stop-color="#E4B858"/>
+      <stop offset="100%" stop-color="#A06818"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="#FBF5E9"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Соты (декоративный узор в углу) -->
+  <g fill="#C88A26" opacity="0.09">
+    <polygon points="60,60 105,60 127.5,100 105,140 60,140 37.5,100"/>
+    <polygon points="150,60 195,60 217.5,100 195,140 150,140 127.5,100"/>
+    <polygon points="105,140 150,140 172.5,180 150,220 105,220 82.5,180"/>
+    <polygon points="60,220 105,220 127.5,260 105,300 60,300 37.5,260"/>
+    <polygon points="150,220 195,220 217.5,260 195,300 150,300 127.5,260"/>
+  </g>
+  <g fill="#C88A26" opacity="0.06">
+    <polygon points="1050,470 1095,470 1117.5,510 1095,550 1050,550 1027.5,510"/>
+    <polygon points="1140,470 1185,470 1207.5,510 1185,550 1140,550 1117.5,510"/>
+    <polygon points="1095,550 1140,550 1162.5,590 1140,630 1095,630 1072.5,590"/>
+  </g>
+
+  <!-- Большая банка мёда справа -->
+  <g transform="translate(830, 130)">
+    <!-- крышка -->
+    <rect x="30" y="0" width="180" height="20" rx="4" fill="#3A2818"/>
+    <rect x="20" y="20" width="200" height="42" rx="5" fill="#1A0E05"/>
+    <ellipse cx="120" cy="22" rx="100" ry="6" fill="#5A3818"/>
+    <!-- тело -->
+    <path d="M 12 62 L 228 62 L 240 92 L 240 380 Q 240 390 230 390 L 10 390 Q 0 390 0 380 L 0 92 Z" fill="url(#honey)"/>
+    <!-- блик -->
+    <path d="M 12 92 L 24 104 L 24 372 L 12 384 Z" fill="rgba(255,255,255,0.35)"/>
+    <!-- этикетка -->
+    <rect x="24" y="180" width="192" height="150" fill="#F5EBD0" stroke="#8B5A20" stroke-width="2"/>
+    <line x1="24" y1="200" x2="216" y2="200" stroke="#8B5A20" stroke-width="1" opacity="0.4"/>
+    <line x1="24" y1="310" x2="216" y2="310" stroke="#8B5A20" stroke-width="1" opacity="0.4"/>
+    <text x="120" y="245" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="38" font-style="italic" fill="#3A2818">Тихая</text>
+    <text x="120" y="285" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" fill="#6A4A20">пасека</text>
+  </g>
+
+  <!-- Заголовок -->
+  <text x="80" y="230" font-family="Cormorant Garamond, Georgia, serif" font-size="94" fill="#3A2818" font-weight="500">Тихая пасека</text>
+  <text x="80" y="300" font-family="Cormorant Garamond, Georgia, serif" font-size="42" fill="#6A5240" font-style="italic">Мёд, собранный без спешки</text>
+
+  <!-- Хвостик -->
+  <line x1="80" y1="440" x2="180" y2="440" stroke="#C88A26" stroke-width="3"/>
+  <text x="80" y="490" font-family="Inter, sans-serif" font-size="22" fill="#A06818" font-weight="600" letter-spacing="4">СЕМЕЙНАЯ ПАСЕКА · С 1978 ГОДА</text>
+  <text x="80" y="530" font-family="Inter, sans-serif" font-size="22" fill="#6A5240">Костромская область · 18 пчелиных семей</text>
+  <text x="80" y="575" font-family="Inter, sans-serif" font-size="20" fill="#A06818" font-weight="500">tihaya-paseka.ru</text>
+
+  <!-- Маленькая пчёлка -->
+  <g transform="translate(720, 480)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="16" ry="10" fill="#F5D678"/>
+    <rect x="-14" y="-4" width="6" height="8" fill="#3A2818"/>
+    <rect x="-2" y="-4" width="6" height="8" fill="#3A2818"/>
+    <ellipse cx="-6" cy="-10" rx="10" ry="6" fill="rgba(200,220,240,0.6)" stroke="#A06818" stroke-width="0.5"/>
+    <ellipse cx="6" cy="-10" rx="10" ry="6" fill="rgba(200,220,240,0.6)" stroke="#A06818" stroke-width="0.5"/>
+    <circle cx="14" cy="-2" r="2" fill="#3A2818"/>
+  </g>
+</svg>
