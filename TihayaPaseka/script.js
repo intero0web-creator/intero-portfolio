@@ -173,9 +173,9 @@
   }
 
   ready(function () {
-    applyConfig();
-    initNav();
-    initForms();
-    initShopFilter();
+    // Каждый модуль изолирован — если один упадёт, остальные всё равно запустятся.
+    [applyConfig, initNav, initForms, initShopFilter].forEach(function (fn) {
+      try { fn(); } catch (e) { console.error('[Тихая пасека] ошибка в ' + fn.name + ':', e); }
+    });
   });
 })();
