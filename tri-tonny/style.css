@@ -1,0 +1,415 @@
+/* Три тонны — грузовая/переездная компания.
+   Индустриальный стиль: чёрный + предупредительный жёлтый, накладные и манифесты
+   вместо редакционной эстетики часовой/ножевой мастерских. Другой архетип бизнеса —
+   бригада и техника, а не мастер-одиночка за верстаком. */
+
+:root{
+  --paper:#F2F1EC;
+  --paper-2:#E6E4DA;
+  --white:#FFFFFF;
+  --ink:#151515;
+  --ink-2:#262626;
+  --grey:#5B5B58;
+  --grey-2:#84837D;
+  --grey-3:#ADABA1;
+  --yellow:#F2C230;
+  --yellow-2:#FFDD5C;
+  --orange:#E8631C;
+  --line:rgba(21,21,21,0.16);
+  --line-soft:rgba(21,21,21,0.08);
+  --shadow-sm:0 2px 10px rgba(21,21,21,0.08);
+  --shadow-md:0 20px 46px rgba(21,21,21,0.2);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  font-family:'Work Sans','Helvetica Neue',system-ui,sans-serif;
+  color:var(--ink-2);
+  background:var(--paper);
+  line-height:1.6;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+button{cursor:pointer;font:inherit;outline:none;border:none;background:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+img,svg{max-width:100%;display:block}
+a{color:var(--orange);text-decoration:none;transition:color .16s}
+a:hover{color:var(--ink)}
+
+h1,h2,h3,h4{
+  font-family:'Bebas Neue',Impact,sans-serif;
+  font-weight:400;
+  line-height:0.98;
+  letter-spacing:0.01em;
+  color:var(--ink);
+  text-transform:uppercase;
+}
+h1{font-size:clamp(2.6rem,7vw,5.4rem)}
+h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+h3{font-family:'Work Sans',sans-serif;font-size:1.15rem;font-weight:700;text-transform:none;letter-spacing:0;color:var(--ink)}
+h4{font-family:'Work Sans',sans-serif;font-size:0.98rem;font-weight:700;text-transform:none;letter-spacing:0}
+p{margin-bottom:1em}p:last-child{margin-bottom:0}
+strong{font-weight:700;color:var(--ink)}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+.container{max-width:1140px;margin:0 auto;padding:0 26px;position:relative}
+.narrow{max-width:700px;margin-left:auto;margin-right:auto}
+
+/* ═══════════ ПРЕДУПРЕДИТЕЛЬНАЯ ПОЛОСА (декор) ═══════════ */
+.hazard-strip{
+  height:10px;
+  background:repeating-linear-gradient(-45deg,var(--ink) 0 18px,var(--yellow) 18px 36px);
+}
+
+/* ═══════════ NAV ═══════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--ink);color:var(--paper);
+  padding:16px 0;
+  transition:padding .22s ease,box-shadow .22s ease;
+}
+.nav .hazard-strip{margin:-16px 0 16px}
+.nav.scrolled{padding:10px 0;box-shadow:0 8px 24px rgba(0,0,0,0.28)}
+.nav.scrolled .hazard-strip{margin:-10px 0 10px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--paper)}
+.brand:hover{color:var(--paper);opacity:0.8}
+.brand-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;background:var(--yellow);color:var(--ink);
+  font-family:'Bebas Neue',sans-serif;font-size:1.1rem;
+  transform:skewX(-8deg);
+}
+.brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.03em}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{
+  padding:8px 14px;font-size:0.82rem;font-weight:600;color:var(--grey-3);
+  text-transform:uppercase;letter-spacing:0.05em;
+  transition:color .16s,background .16s;
+}
+.nav-links a:not(.nav-cta):hover{color:var(--paper)}
+.nav-links a.active{color:var(--yellow)}
+.nav-cta{
+  margin-left:10px;padding:9px 18px !important;
+  background:var(--yellow);color:var(--ink) !important;font-weight:700 !important;
+  transform:skewX(-6deg);transition:background .16s,transform .16s;
+}
+.nav-cta:hover{background:var(--yellow-2);color:var(--ink) !important;transform:skewX(-6deg) translateX(2px)}
+.nav-toggle{display:none;width:36px;height:36px;position:relative;cursor:pointer}
+.nav-toggle span{
+  position:absolute;left:7px;right:7px;height:2px;background:var(--paper);
+  transition:transform .26s ease,opacity .16s,top .26s;
+}
+.nav-toggle span:nth-child(1){top:12px}
+.nav-toggle span:nth-child(2){top:18px}
+.nav-toggle span:nth-child(3){top:24px}
+.nav-toggle[aria-expanded=true] span:nth-child(1){top:18px;transform:rotate(45deg)}
+.nav-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded=true] span:nth-child(3){top:18px;transform:rotate(-45deg)}
+
+/* ═══════════ HERO — асимметрия, машина обрезана по краю ═══════════ */
+.hero{
+  background:var(--paper);
+  padding:150px 0 0;
+  position:relative;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr 0.95fr;
+  align-items:end;gap:20px;
+}
+.hero-copy{padding-bottom:56px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--orange);font-size:0.8rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;margin-bottom:18px;
+}
+.hero-eyebrow::before{content:"";width:22px;height:3px;background:var(--yellow)}
+.hero h1{margin-bottom:24px}
+.hero h1 .hl{
+  background:linear-gradient(to bottom,transparent 58%,var(--yellow) 58%);
+  padding:0 4px;
+}
+.hero-lead{max-width:520px;color:var(--grey);font-size:1.08rem;line-height:1.6;margin-bottom:34px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 28px;
+  font-size:0.92rem;font-weight:700;border:none;cursor:pointer;
+  transition:transform .12s,background .18s,color .18s;
+  text-decoration:none;text-transform:uppercase;letter-spacing:0.03em;
+  font-family:'Work Sans',sans-serif;line-height:1;
+}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--orange);color:var(--white);transform:translateY(-2px)}
+.btn-primary span{transition:transform .18s}
+.btn-primary:hover span{transform:translateX(4px)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:var(--orange);color:var(--white)}
+
+/* Иллюстрация грузовика — обрезана по правому краю контейнера */
+.truck-scene{
+  position:relative;
+  display:flex;justify-content:flex-end;
+  animation:truckBob 4.2s ease-in-out infinite;
+}
+@keyframes truckBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.truck-svg{filter:drop-shadow(0 20px 30px rgba(21,21,21,0.22))}
+
+/* Манифест-полоса статистики — чёрная лента на всю ширину */
+.manifest{
+  background:var(--ink);color:var(--paper);
+  display:flex;
+  margin-top:40px;
+}
+.manifest-item{
+  flex:1;padding:26px 22px;text-align:center;
+  border-left:1px solid rgba(242,241,236,0.14);
+}
+.manifest-item:first-child{border-left:none}
+.manifest-num{
+  font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--yellow);line-height:1;
+}
+.manifest-num small{font-size:0.4em;color:var(--paper);margin-left:4px;font-family:'Work Sans',sans-serif;font-weight:600;letter-spacing:0.02em}
+.manifest-lbl{color:var(--grey-3);font-size:0.82rem;margin-top:8px;line-height:1.45}
+
+/* ═══════════ SECTIONS ═══════════ */
+section{padding:92px 0}
+.section-paper2{background:var(--paper-2)}
+.section-ink{background:var(--ink);color:var(--paper)}
+.section-ink h2{color:var(--paper)}
+.section-ink .section-head p{color:var(--grey-3)}
+
+.section-head{max-width:620px;margin-bottom:50px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;color:var(--orange);
+  font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;
+}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--yellow)}
+.section-ink .eyebrow{color:var(--yellow)}
+.section-head h2{margin-bottom:14px}
+.section-head p{color:var(--grey);font-size:1.02rem;max-width:560px}
+
+/* ─── FACTS: чек-лист вместо карточек/списка ─── */
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.check-item{background:var(--paper);padding:32px 30px;display:flex;gap:18px}
+.check-mark{
+  flex-shrink:0;width:32px;height:32px;background:var(--yellow);
+  display:grid;place-items:center;transform:skewX(-6deg);
+}
+.check-mark svg{width:16px;height:16px;transform:skewX(6deg)}
+.check-item h3{margin-bottom:8px}
+.check-item p{color:var(--grey);font-size:0.95rem;line-height:1.62}
+@media(max-width:760px){.checklist{grid-template-columns:1fr}}
+
+/* ─── PRICES: накладная/манифест ─── */
+.waybill{max-width:820px;margin:0 auto;border:2px solid var(--ink)}
+.waybill-head{
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--ink);color:var(--paper);padding:14px 24px;
+  font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.04em;
+}
+.waybill-head span{color:var(--yellow);font-family:'JetBrains Mono',monospace;font-size:0.85rem;letter-spacing:0}
+.waybill-row{
+  display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;
+  padding:18px 24px;border-bottom:1px solid var(--line);
+}
+.waybill-row:nth-child(even){background:var(--paper-2)}
+.waybill-row:last-of-type{border-bottom:none}
+.wb-name{font-weight:700;color:var(--ink);font-size:0.98rem}
+.wb-hint{display:block;color:var(--grey-2);font-size:0.82rem;margin-top:3px;font-weight:400}
+.wb-val{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--ink);font-size:1.05rem;white-space:nowrap}
+.waybill-note{
+  padding:18px 24px;background:var(--paper);
+  color:var(--grey);font-size:0.88rem;line-height:1.6;border-top:2px solid var(--ink);
+}
+
+/* Штамп отказа — «ОТКАЗ» под наклоном */
+.refusal{
+  max-width:640px;margin:52px auto 0;position:relative;
+  border:2px dashed var(--orange);padding:32px 30px 30px;
+}
+.refusal-stamp{
+  position:absolute;top:-18px;right:24px;
+  background:var(--paper);color:var(--orange);
+  border:2px solid var(--orange);
+  padding:5px 16px;
+  font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;
+  transform:rotate(-4deg);
+}
+.refusal-lead{color:var(--grey);font-size:0.92rem;margin-bottom:16px}
+.refusal ul{list-style:none}
+.refusal li{
+  padding:9px 0 9px 22px;position:relative;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--ink-2);font-size:0.93rem;line-height:1.55;
+}
+.refusal li:last-child{border-bottom:none}
+.refusal li::before{content:"✕";position:absolute;left:0;color:var(--orange);font-weight:700;font-size:0.85em}
+
+/* ─── FLOW: маршрут с точками-остановками ─── */
+.route{position:relative;max-width:960px;margin:0 auto}
+.route-line{
+  position:absolute;top:23px;left:5%;right:5%;height:3px;
+  background:repeating-linear-gradient(90deg,var(--grey-3) 0 10px,transparent 10px 20px);
+}
+.route-stops{display:flex;position:relative}
+.stop{flex:1;text-align:center;padding:0 10px}
+.stop-pin{
+  width:46px;height:46px;margin:0 auto 18px;background:var(--ink);color:var(--yellow);
+  display:grid;place-items:center;position:relative;z-index:2;
+  font-family:'Bebas Neue',sans-serif;font-size:1.15rem;
+  clip-path:polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+}
+.stop h4{margin-bottom:8px}
+.stop p{color:var(--grey);font-size:0.9rem;line-height:1.55}
+@media(max-width:800px){
+  .route-stops{flex-direction:column;gap:30px}
+  .route-line{display:none}
+}
+
+/* ─── REVIEWS: отрывные талоны ─── */
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ticket{
+  background:var(--paper);border:1.5px solid var(--ink);padding:26px 24px 22px;
+  position:relative;
+}
+.ticket::before{
+  content:"";position:absolute;top:-1.5px;left:20px;right:20px;
+  border-top:2px dashed var(--grey-3);
+}
+.ticket p{color:var(--ink-2);font-size:0.94rem;line-height:1.6;margin-bottom:18px;padding-top:10px}
+.ticket-who{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-top:1px dashed var(--line);padding-top:12px;
+  font-size:0.82rem;font-weight:700;color:var(--ink);
+}
+.ticket-who span{font-weight:400;color:var(--grey-2)}
+.ticket-code{
+  margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:0.7rem;
+  color:var(--grey-3);letter-spacing:0.08em;
+}
+@media(max-width:820px){.tickets{grid-template-columns:1fr}}
+
+/* ─── CONTACT: форма-накладная (откуда/куда) ─── */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:0;max-width:1000px;margin:0 auto;box-shadow:var(--shadow-md)}
+.contact-info{background:var(--ink);color:var(--paper);padding:44px 38px}
+.contact-info h3{color:var(--paper);margin-bottom:16px;font-size:1.3rem}
+.contact-info > p{color:var(--grey-3);margin-bottom:24px;font-size:0.92rem;line-height:1.6}
+.ci-line{padding:13px 0;border-bottom:1px solid rgba(242,241,236,0.12)}
+.ci-line:last-child{border-bottom:none}
+.ci-line .k{color:var(--yellow);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.ci-line .v{font-size:0.96rem;color:var(--paper)}
+.ci-line .v a{color:var(--paper);border-bottom:1px dotted var(--yellow)}
+.ci-line .v a:hover{color:var(--yellow)}
+
+.form-way{background:var(--white);padding:44px 40px}
+.form-way h3{margin-bottom:8px;font-size:1.25rem}
+.form-way .form-intro{color:var(--grey);font-size:0.9rem;margin-bottom:22px}
+.form-grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.form-field{margin-bottom:16px}
+.form-field.full{grid-column:1 / -1}
+.form-field label{
+  display:block;font-size:0.74rem;font-weight:700;color:var(--ink);
+  margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;
+}
+.form-field label .req{color:var(--orange)}
+.form-field input,.form-field textarea,.form-field select{
+  width:100%;padding:11px 13px;border:1.5px solid var(--line);background:var(--paper);
+  font:inherit;color:var(--ink);transition:border-color .16s,background .16s;
+}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{
+  outline:none;border-color:var(--orange);background:var(--white);
+}
+.form-field textarea{min-height:80px;resize:vertical}
+.checkline{
+  display:flex;align-items:center;gap:10px;padding:10px 0;font-size:0.88rem;color:var(--grey);
+}
+.checkline input{width:16px;height:16px;accent-color:var(--orange);cursor:pointer}
+.consent{
+  display:flex;align-items:flex-start;gap:12px;padding:13px 14px;background:var(--paper-2);
+  border-left:3px solid var(--orange);margin:16px 0 20px;cursor:pointer;
+}
+.consent input{margin-top:3px;width:15px;height:15px;accent-color:var(--orange);flex-shrink:0;cursor:pointer}
+.consent-text{font-size:0.82rem;color:var(--grey);line-height:1.5}
+
+.demo-badge{
+  display:none;margin-bottom:20px;padding:11px 15px;background:var(--paper-2);
+  border-left:3px solid var(--orange);font-size:0.83rem;color:var(--grey);line-height:1.5;
+}
+.demo-badge b{color:var(--orange)}
+.form-msg{margin-top:16px;padding:11px 15px;font-size:0.9rem;line-height:1.5}
+.form-msg:empty{display:none}
+.form-msg.loading{background:var(--paper-2);color:var(--grey)}
+.form-msg.ok{background:rgba(50,120,60,0.12);color:#2A5C34;border:1px solid rgba(50,120,60,0.3)}
+.form-msg.err{background:rgba(200,50,30,0.10);color:#A0301A}
+
+@media(max-width:820px){
+  .contact-wrap{grid-template-columns:1fr}
+  .contact-info,.form-way{padding:34px 26px}
+  .form-grid2{grid-template-columns:1fr}
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.foot{background:var(--ink);color:var(--grey-3);padding:52px 0 20px;font-size:0.88rem}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(242,241,236,0.1)}
+.foot h4{
+  font-family:'Work Sans',sans-serif;font-weight:700;font-size:0.7rem;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);margin-bottom:14px;
+}
+.foot ul{list-style:none}
+.foot li{margin-bottom:8px}
+.foot a{color:var(--grey-3)}
+.foot a:hover{color:var(--yellow)}
+.foot-brand{color:var(--paper);font-family:'Bebas Neue',sans-serif;font-size:1.5rem;margin-bottom:10px;letter-spacing:0.03em}
+.foot-bottom{padding-top:20px;color:var(--grey-2);font-size:0.8rem;text-align:center}
+
+/* ═══════════ АДАПТАЦИЯ ═══════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:8px}
+  .hero-copy{padding-bottom:24px}
+  .truck-scene{justify-content:center;margin-top:-10px}
+  .truck-svg{width:280px !important;height:auto !important}
+  .manifest{flex-direction:column}
+  .manifest-item{border-left:none;border-top:1px solid rgba(242,241,236,0.14)}
+  .manifest-item:first-child{border-top:none}
+}
+@media(max-width:720px){
+  .nav-toggle{display:block}
+  .nav-links{
+    position:fixed;top:78px;left:0;right:0;background:var(--ink);
+    padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:2px;
+    box-shadow:0 16px 30px rgba(0,0,0,0.3);
+    transform:translateY(-140%);transition:transform .3s ease;
+  }
+  .nav.nav-open .nav-links{transform:translateY(0)}
+  .nav-links a{padding:13px 6px;border-bottom:1px solid rgba(242,241,236,0.08);text-align:left}
+  .nav-cta{margin-left:0;margin-top:10px;text-align:center;justify-content:center}
+}
+@media(max-width:560px){
+  .container{padding:0 20px}
+  .hero{padding:120px 0 0}
+  section{padding:60px 0}
+  .waybill-row{grid-template-columns:1fr;gap:4px}
+  .refusal{padding:26px 22px 24px}
+  .contact-info,.form-way{padding:28px 20px}
+}
+
+/* ---- Текст политики конфиденциальности (privacy.html) ---- */
+.privacy-prose h2{
+  font-family:'Work Sans',sans-serif;text-transform:none;letter-spacing:0;
+  margin-top:40px;margin-bottom:14px;font-size:1.3rem;font-weight:700;
+}
+.privacy-prose h2:first-child{margin-top:0}
+.privacy-prose p{color:var(--grey);margin-bottom:1em;line-height:1.7}
+.privacy-prose ul{margin:14px 0 18px 22px}
+.privacy-prose li{margin-bottom:8px;color:var(--grey);line-height:1.62}
+.privacy-prose a{border-bottom:1px dotted var(--orange);color:var(--orange)}
+.privacy-prose a:hover{color:var(--ink);border-color:var(--ink)}
+
+@media(prefers-reduced-motion:reduce){
+  .truck-scene{animation:none !important}
+}

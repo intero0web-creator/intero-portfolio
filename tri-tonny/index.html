@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Три тонны — переезды по Твери и области</title>
+<meta name="description" content="Грузовая бригада «Три тонны». Максим Дегтярёв, с 2016 года, три машины, пять грузчиков в штате. Цену называем по телефону один раз и не меняем на месте."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ==== NAV ==== -->
+<nav class="nav" id="nav">
+  <div class="hazard-strip"></div>
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">3</span>
+      <span class="brand-name">Три тонны</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#how" data-nav>Как работаем</a>
+      <a href="#prices" data-nav>Цены</a>
+      <a href="#flow" data-nav>Как заказать</a>
+      <a href="#reviews" data-nav>Отзывы</a>
+      <a href="#contact" class="nav-cta">Заказать переезд</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==== HERO ==== -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">Тверь и область · с 2016 года</div>
+        <h1>Цена — это <span class="hl">цифра</span>,<br/>а не «от»</h1>
+        <p class="hero-lead">Максим. Пять лет проработал экспедитором в чужой транспортной компании, в 2016-м собрал свою бригаду. Сейчас — три машины и пять грузчиков в штате, не подрядчики со стороны. Цену называю по телефону после уточнения деталей — и она не меняется, когда бригада уже стоит у вас в квартире.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Заказать переезд <span aria-hidden="true">→</span></a>
+          <a href="#prices" class="btn btn-ghost">Посмотреть цены</a>
+        </div>
+      </div>
+
+      <!-- Грузовик — обрезан по правому краю -->
+      <div class="truck-scene" aria-hidden="true">
+        <svg class="truck-svg" viewBox="0 0 420 260" width="420" height="260">
+          <defs>
+            <linearGradient id="cabG" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#2A2A2A"/>
+              <stop offset="100%" stop-color="#141414"/>
+            </linearGradient>
+            <linearGradient id="boxG" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFDD5C"/>
+              <stop offset="100%" stop-color="#F2C230"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Земля/тень -->
+          <ellipse cx="230" cy="230" rx="190" ry="12" fill="rgba(21,21,21,0.10)"/>
+
+          <!-- Кузов -->
+          <rect x="60" y="60" width="230" height="130" rx="4" fill="url(#boxG)" stroke="#151515" stroke-width="3"/>
+          <line x1="60" y1="100" x2="290" y2="100" stroke="#151515" stroke-width="1.5" opacity="0.35"/>
+          <line x1="60" y1="150" x2="290" y2="150" stroke="#151515" stroke-width="1.5" opacity="0.35"/>
+          <!-- Номер/эмблема на кузове -->
+          <text x="175" y="130" text-anchor="middle" font-family="Bebas Neue" font-size="30" fill="#151515">3 ТОННЫ</text>
+
+          <!-- Кабина -->
+          <path d="M290,190 L290,110 L330,110 L360,140 L360,190 Z" fill="url(#cabG)" stroke="#000" stroke-width="3"/>
+          <path d="M300,120 L326,120 L346,142 L300,142 Z" fill="#7A8A96" opacity="0.85"/>
+          <rect x="296" y="150" width="12" height="10" rx="2" fill="#F2C230"/>
+
+          <!-- Полосатая предупредительная лента снизу кузова -->
+          <rect x="60" y="182" width="230" height="8" fill="#151515"/>
+          <g fill="#F2C230">
+            <rect x="64" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="84" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="104" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="124" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="144" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="164" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="184" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="204" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="224" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="244" y="182" width="6" height="8" transform="skewX(-30)"/>
+            <rect x="264" y="182" width="6" height="8" transform="skewX(-30)"/>
+          </g>
+
+          <!-- Колёса -->
+          <circle cx="110" cy="200" r="24" fill="#151515"/>
+          <circle cx="110" cy="200" r="10" fill="#5B5B58"/>
+          <circle cx="230" cy="200" r="24" fill="#151515"/>
+          <circle cx="230" cy="200" r="10" fill="#5B5B58"/>
+          <circle cx="330" cy="200" r="22" fill="#151515"/>
+          <circle cx="330" cy="200" r="9" fill="#5B5B58"/>
+
+          <!-- Коробки рядом с грузовиком -->
+          <g stroke="#151515" stroke-width="2">
+            <rect x="10" y="170" width="34" height="34" fill="#E6E4DA"/>
+            <line x1="10" y1="187" x2="44" y2="187"/>
+            <line x1="27" y1="170" x2="27" y2="204"/>
+            <rect x="14" y="140" width="26" height="26" fill="#F2F1EC"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="manifest">
+      <div class="manifest-item">
+        <div class="manifest-num">2016</div>
+        <div class="manifest-lbl">на рынке с этого года — своя бригада, не подряд</div>
+      </div>
+      <div class="manifest-item">
+        <div class="manifest-num">5<small>грузчиков</small></div>
+        <div class="manifest-lbl">в штате — постоянные, не студенты с биржи труда</div>
+      </div>
+      <div class="manifest-item">
+        <div class="manifest-num">300 000<small>₽</small></div>
+        <div class="manifest-lbl">страховка груза включена в стоимость любого переезда</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== FACTS ==== -->
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Как это устроено</div>
+      <h2>Что нужно знать заранее</h2>
+      <p>Четыре вещи, из-за которых мы работаем именно так.</p>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <h3>Не больше двух переездов в день на бригаду</h3>
+          <p>Чтобы не собирать вещи «на автомате» в девять вечера, когда руки устали и роняют коробки. Больше не берём, даже если просят доплатить.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <h3>Опись вещей при погрузке — без неё не начинаем</h3>
+          <p>Считаем коробки, отмечаем крупногабарит и хрупкое отдельным списком, вы подписываете. Если что-то потеряется — у вас на руках бумага с точным перечнем, а не наши слова против ваших.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <h3>Страховка на 300 000 ₽ включена в цену</h3>
+          <p>Оформлена официально через страховую компанию, не «на репутации». Не отдельная платная опция — входит в стоимость любого переезда квартиры.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <h3>Пианино и сейфы — только с альпинистским поясом</h3>
+          <p>Не поднимаем тяжёлое на весу вчетвером. Двое грузчиков пришли к нам из других бригад именно с травмой спины после такого подхода.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== PRICES ==== -->
+<section id="prices" class="section-paper2">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Цены</div>
+      <h2>Прайс — прямо и без звёздочек</h2>
+      <p>Точную цифру называем по телефону после уточнения деталей — и не меняем её на месте, даже если по факту лифт оказался меньше, чем вы думали.</p>
+    </div>
+
+    <div class="waybill">
+      <div class="waybill-head">
+        <span>ПРАЙС-ЛИСТ</span>
+        <span class="mono">№ 3Т-2024</span>
+      </div>
+
+      <div class="waybill-row">
+        <div><div class="wb-name">1-комнатная квартира</div><span class="wb-hint">Газель, стандартная загрузка до 15 куб. м</span></div>
+        <div class="wb-val">8 000–11 000 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">2–3-комнатная квартира</div><span class="wb-hint">Валдай, до 20 куб. м</span></div>
+        <div class="wb-val">13 000–18 000 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">Офисный переезд</div><span class="wb-hint">Расчёт по числу рабочих мест</span></div>
+        <div class="wb-val">от 25 000 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">Разборка / сборка мебели</div><span class="wb-hint">За предмет</span></div>
+        <div class="wb-val">от 500 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">Упаковка</div><span class="wb-hint">Стрейч-плёнка в два слоя, картон, за предмет</span></div>
+        <div class="wb-val">от 150 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">Подъём без лифта</div><span class="wb-hint">За этаж с грузчика</span></div>
+        <div class="wb-val">+100 ₽</div>
+      </div>
+      <div class="waybill-row">
+        <div><div class="wb-name">Пианино, сейф, тяжёлый негабарит</div><span class="wb-hint">Отдельно, нужен минимум 2 грузчика с поясом</span></div>
+        <div class="wb-val">от 5 000 ₽</div>
+      </div>
+
+      <div class="waybill-note">
+        Оплата после разгрузки и проверки описи — картой, переводом или наличными с чеком. Предоплата не требуется, кроме заказов день в день без осмотра.
+      </div>
+    </div>
+
+    <aside class="refusal">
+      <div class="refusal-stamp">ОТКАЗ</div>
+      <p class="refusal-lead">Честнее сказать сразу, чем взять заказ, который не сможем сделать хорошо.</p>
+      <ul>
+        <li>Стройматериалы и строительный мусор — не наш профиль, вызывайте компанию по вывозу</li>
+        <li>Переезды 31 декабря — 8 января — у бригады тоже семья</li>
+        <li>«Прямо сейчас, без осмотра» — если это не студия, приедем не раньше чем через 2 часа и по предоплате</li>
+        <li>Негабарит выше 4 этажа без лифта вручную — только с автовышкой, отдельная услуга</li>
+        <li>Животных и растения как груз — только вместе с хозяином в машине</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ==== FLOW ==== -->
+<section id="flow" class="section-ink">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Как заказать</div>
+      <h2>Четыре шага, всё понятно</h2>
+      <p>От заявки до расставленной по местам мебели.</p>
+    </div>
+
+    <div class="route">
+      <div class="route-line"></div>
+      <div class="route-stops">
+        <div class="stop">
+          <div class="stop-pin">01</div>
+          <h4 style="color:#F2F1EC">Оставляете заявку</h4>
+          <p>Адреса, этаж, лифт есть или нет, примерный объём вещей</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">02</div>
+          <h4 style="color:#F2F1EC">Созваниваемся</h4>
+          <p>Уточняем детали, называю точную цену, фиксируем дату и время</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">03</div>
+          <h4 style="color:#F2F1EC">Грузим по описи</h4>
+          <p>Считаем и записываем каждую позицию, вы подписываете</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">04</div>
+          <h4 style="color:#F2F1EC">Разгружаем и расставляем</h4>
+          <p>По вашей раскладке, забираем упаковку с собой</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== REVIEWS ==== -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Что говорят</div>
+      <h2>Отзывы клиентов</h2>
+      <p>Тех, кто разрешил поставить сюда — из переписки и с отзовиков.</p>
+    </div>
+
+    <div class="tickets">
+      <div class="ticket">
+        <p>Переезжали двухкомнатную с роялем на четвёртый этаж без лифта. Предупредили заранее — приехали с ремнями, подняли вдвоём, аккуратно. Ни царапины на корпусе. Цена не изменилась ни на рубль от той, что назвали по телефону.</p>
+        <div class="ticket-who">Ольга<span>Тверь</span></div>
+        <div class="ticket-code">ЗАКАЗ · 2-КОМН · РОЯЛЬ</div>
+      </div>
+      <div class="ticket">
+        <p>Перевозили офис на 12 рабочих мест в выходные, чтобы не останавливать работу в будни. Опись вещей отдельно приложили к акту — бухгалтерия приняла без вопросов.</p>
+        <div class="ticket-who">Виктор<span>финансовый директор</span></div>
+        <div class="ticket-code">ЗАКАЗ · ОФИС · 12 МЕСТ</div>
+      </div>
+      <div class="ticket">
+        <p>До этого заказывал в другой компании — по телефону сказали 9000, по факту накинули ещё 4 тысячи «за этаж» и «за диван». У Максима цена была одна и та же от звонка до расчёта.</p>
+        <div class="ticket-who">Артём<span>Тверь</span></div>
+        <div class="ticket-code">ЗАКАЗ · 1-КОМН</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== CONTACT ==== -->
+<section id="contact" class="section-paper2">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Заказать переезд</div>
+      <h2>Заявка на переезд</h2>
+      <p>Заполните форму — перезвоню в течение дня, обычно раньше. Или звоните напрямую.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <aside class="contact-info">
+        <h3>Проще всего — форма</h3>
+        <p>В рейсе или на погрузке не всегда могу ответить сразу. Заявка через форму приходит мгновенно, перезваниваю в первую очередь.</p>
+
+        <div class="ci-line">
+          <div class="k">Телефон</div>
+          <div class="v"><a data-cfg="phone" data-cfg-href="tel">+7 (4822) 71-22-33</a></div>
+        </div>
+        <div class="ci-line" data-cfg-optional>
+          <div class="k">Telegram</div>
+          <div class="v"><a data-cfg="telegram" data-cfg-href="tg" target="_blank" rel="noopener">@handle</a></div>
+        </div>
+        <div class="ci-line">
+          <div class="k">Почта</div>
+          <div class="v"><a data-cfg="email" data-cfg-href="mailto">zayavka@3tonny.ru</a></div>
+        </div>
+        <div class="ci-line">
+          <div class="k">База</div>
+          <div class="v" data-cfg="address">Тверь, работаем по области</div>
+        </div>
+        <div class="ci-line">
+          <div class="k">Когда отвечаем</div>
+          <div class="v">Ежедневно, 8:00–21:00</div>
+        </div>
+      </aside>
+
+      <form class="form-way" data-form data-source="Заявка на переезд с сайта">
+        <h3>Оставить заявку</h3>
+        <p class="form-intro">Чем подробнее опишете — тем точнее назовём цену по телефону.</p>
+
+        <div class="demo-badge" data-cfg-demo>
+          <b>Демо-режим.</b> Реальная отправка ещё не настроена — форма работает, но заявка никуда не улетит. Настраивается в <code>config.js</code>.
+        </div>
+
+        <div class="form-grid2">
+          <div class="form-field">
+            <label for="t-name">Ваше имя <span class="req">*</span></label>
+            <input type="text" id="t-name" name="Имя" required autocomplete="name" placeholder="Как обращаться"/>
+          </div>
+          <div class="form-field">
+            <label for="t-phone">Телефон <span class="req">*</span></label>
+            <input type="tel" id="t-phone" name="Телефон" required autocomplete="tel" placeholder="+7…"/>
+          </div>
+          <div class="form-field">
+            <label for="t-from">Адрес откуда <span class="req">*</span></label>
+            <input type="text" id="t-from" name="Откуда" required placeholder="Улица, дом, этаж"/>
+          </div>
+          <div class="form-field">
+            <label for="t-to">Адрес куда <span class="req">*</span></label>
+            <input type="text" id="t-to" name="Куда" required placeholder="Улица, дом, этаж"/>
+          </div>
+          <div class="form-field">
+            <label for="t-date">Дата переезда</label>
+            <input type="date" id="t-date" name="Дата"/>
+          </div>
+          <div class="form-field">
+            <label for="t-volume">Объём</label>
+            <select id="t-volume" name="Объём">
+              <option value="">— выберите —</option>
+              <option>Студия / 1 комната</option>
+              <option>2–3 комнаты</option>
+              <option>Дом / большая квартира</option>
+              <option>Офис</option>
+              <option>Отдельные предметы (пианино, сейф и т.п.)</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="t-comment">Комментарий</label>
+            <textarea id="t-comment" name="Комментарий" placeholder="Этаж, лифт есть/нет, что нужно упаковать, есть ли крупногабарит"></textarea>
+          </div>
+        </div>
+
+        <label class="checkline">
+          <input type="checkbox" name="Нужна упаковка" value="да"/>
+          Нужна упаковка (плёнка, картон)
+        </label>
+        <label class="checkline">
+          <input type="checkbox" name="Нужна разборка мебели" value="да"/>
+          Нужна разборка/сборка мебели
+        </label>
+
+        <label class="consent">
+          <input type="checkbox" name="Согласие" value="согласен" required/>
+          <span class="consent-text">Согласен(-на) на обработку моих контактных данных и адресов заказа для ответа на эту заявку — согласно <a href="privacy.html" target="_blank" rel="noopener">политике конфиденциальности</a>. Ничего не храню на сайте — заявка уходит мне на почту, дальше только между нами.</span>
+        </label>
+
+        <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==== FOOTER ==== -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand" data-cfg="brand">Три тонны</div>
+        <p>Грузовая бригада для переездов. Тверь и область. Работаем один город, три машины, пять грузчиков в штате.</p>
+      </div>
+      <div>
+        <h4>По сайту</h4>
+        <ul>
+          <li><a href="#how">Как работаем</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#flow">Как заказать</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contact">Заказать переезд</a></li>
+          <li><a href="privacy.html">Конфиденциальность</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li data-cfg="phone">+7 (4822) 71-22-33</li>
+          <li><a data-cfg="email" data-cfg-href="mailto">zayavka@3tonny.ru</a></li>
+          <li data-cfg-optional>Telegram: <a data-cfg="telegram" data-cfg-href="tg" target="_blank" rel="noopener">@handle</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2024 <span data-cfg="brand">Три тонны</span> · <span data-cfg="master">Максим Дегтярёв</span>. Своя бригада, без подряда.
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
