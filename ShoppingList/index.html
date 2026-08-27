@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Список покупок</title>
+<meta name="description" content="Список покупок в виде доски: Нужно купить → В корзине → Куплено. Отделы магазина, примерная сумма и фильтры. Данные хранятся локально в браузере."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="board-header">
+    <div>
+      <div class="board-title"><span class="pin" aria-hidden="true"></span>Список покупок</div>
+      <p class="board-sub">Данные хранятся только в этом браузере</p>
+    </div>
+    <div class="ticker" id="ticker" aria-label="Статистика">
+      <span><b id="tkTotal">0</b> позиций</span>
+      <span class="sep">·</span>
+      <span><b id="tkBought">0</b> куплено</span>
+      <span class="sep">·</span>
+      <span>потрачено <span class="spent" id="tkSpent">—</span></span>
+      <span class="sep">·</span>
+      <span>осталось на <span class="left" id="tkLeft">—</span></span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search" placeholder="Поиск по названию…"/>
+    </div>
+    <div class="cat-scroll" id="catScroll"></div>
+  </div>
+
+  <div class="board" id="board">
+
+    <section class="col" data-stage="todo">
+      <div class="col-head">
+        <span class="col-title">Нужно купить</span>
+        <span class="col-count" id="countTodo">0</span>
+        <span class="col-sum" id="sumTodo"></span>
+      </div>
+
+      <form class="quick-add" id="quickAddForm">
+        <input type="text" id="fName" placeholder="Добавить в список…" maxlength="60" required/>
+        <button type="button" class="quick-add-more" id="quickAddMore" aria-label="Ещё поля" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </button>
+        <button type="submit" class="quick-add-btn" aria-label="Добавить">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </form>
+      <div class="quick-add-extra" id="quickAddExtra">
+        <input type="text" id="fQty" class="qty" placeholder="кол-во"/>
+        <input type="number" id="fPrice" class="price" placeholder="цена ₽" min="0" step="1"/>
+        <select id="fCategory"></select>
+      </div>
+
+      <div class="col-body" id="colTodo"></div>
+    </section>
+
+    <section class="col" data-stage="cart">
+      <div class="col-head">
+        <span class="col-title">В корзине</span>
+        <span class="col-count" id="countCart">0</span>
+        <span class="col-sum" id="sumCart"></span>
+      </div>
+      <div class="col-body" id="colCart"></div>
+    </section>
+
+    <section class="col" data-stage="bought">
+      <div class="col-head">
+        <span class="col-title">Куплено</span>
+        <span class="col-count" id="countBought">0</span>
+        <span class="col-sum" id="sumBought"></span>
+      </div>
+      <div class="col-body" id="colBought"></div>
+    </section>
+
+  </div>
+
+  <div class="empty-all" id="emptyAll" style="display:none">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <p>Список пока пуст. Добавьте первую покупку в колонке «Нужно купить».</p>
+  </div>
+
+  <p class="footer-note">Стрелками на карточке двигайте позицию между колонками. Всё считается прямо в браузере.</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
